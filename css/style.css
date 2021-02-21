@@ -1127,7 +1127,6 @@ ul.experience-chart h4 {
 }
 
 .service-img {
-  width: 100px;
   margin: auto;
 }
 
@@ -1139,7 +1138,7 @@ ul.experience-chart h4 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 100px;
+  top: 160px;
   text-align: center;
   font-weight: 700;
   letter-spacing: -0.5px;
