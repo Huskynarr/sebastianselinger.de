@@ -1138,7 +1138,7 @@ ul.experience-chart h4 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 160px;
+  top: 100px;
   text-align: center;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -1324,10 +1324,12 @@ ul.experience-chart h4 {
   left: 0;
   width: 170px;
   background: #313131;
-  -webkit-transform: translateX(-150px);
-  transform: translateX(-150px);
+  -webkit-transform: translateX(-170px);
+  transform: translateX(-170px);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  padding: 20px 20px 20px 0;
+  font-size: 12px;
 }
 
 .item-caption h2 {
