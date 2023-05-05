@@ -1762,3 +1762,10 @@ textarea.form-control::-webkit-input-placeholder,
 /*--------------------------------
    End Image Hover
 ----------------------------------*/
+
+/*--------------------------------
+   Start Portfolio Image
+----------------------------------*/
+.portfolio-image {
+    aspect-ratio: 16 / 9;
+}
