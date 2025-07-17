@@ -1086,7 +1086,7 @@ ul.experience-chart h4 {
 
 .services {
     background: #fff;
-    padding: 70px 0px;
+    padding: 70px 50px; /* Added horizontal padding */
 }
 
 .services-heading {
@@ -1114,6 +1114,13 @@ ul.experience-chart h4 {
     background: #6f6f6f;
 }
 
+/* Removed general padding rule for better control in specific sections */
+/* .services .row.justify-content-center > .col-lg-4 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+} */
+
+
 .services-icon {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1122,8 +1129,8 @@ ul.experience-chart h4 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
+    /* padding-bottom: 40px; */ /* Removed for better spacing control */
 }
 
 .service-img {

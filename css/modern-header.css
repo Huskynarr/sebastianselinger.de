@@ -1,0 +1,476 @@
+/* =============================
+   Modern Header Styles
+=============================== */
+
+/* Header Section Improvements */
+.header.modern-header {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.header.modern-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 2;
+}
+
+.header.modern-header .container {
+    position: relative;
+    z-index: 3;
+    width: 100% !important;
+}
+
+.header.modern-header .content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 80vh !important;
+    text-align: center !important;
+}
+
+.header.modern-header .modern-head-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.header.modern-header .modern-head-holder {
+    text-align: center !important;
+    padding: 40px 20px !important;
+}
+
+/* Modern Introduction Text */
+.header.modern-header .modern-introduction {
+    font-size: 4rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.8), 
+        0 0 15px rgba(0, 0, 0, 0.6), 
+        0 0 30px rgba(0, 0, 0, 0.4),
+        4px 4px 12px rgba(0, 0, 0, 0.9) !important;
+    margin-bottom: 30px !important;
+    line-height: 1.2 !important;
+    animation: fadeInUp 1s ease-out !important;
+}
+
+.header.modern-header .modern-introduction span {
+    color: #ffffff !important;
+    display: inline-block !important;
+}
+
+/* Enhanced Animated Text */
+.header.modern-header .modern-animated-text {
+    margin-bottom: 40px !important;
+    min-height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.header.modern-header .modern-animated-text .cd-headline {
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.modern-animated-text .cd-words-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+.modern-animated-text .cd-words-wrapper b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.modern-animated-text .cd-words-wrapper b.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+.modern-animated-text .cd-words-wrapper b.is-hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Typing cursor effect */
+.modern-animated-text .cd-words-wrapper::after {
+    content: '|';
+    display: inline-block;
+    color: #667eea;
+    font-weight: 300;
+    animation: blink 1s infinite;
+    margin-left: 3px;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Modern Hire Me Button */
+.header.modern-header .modern-hire-me {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: 'Asap', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 15px 35px !important;
+    border-radius: 50px !important;
+    border: 2px solid transparent !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.4s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    animation: fadeInUp 1s ease-out 0.5s both !important;
+}
+
+.modern-hire-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.modern-hire-me:hover::before {
+    left: 100%;
+}
+
+.modern-hire-me:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.modern-hire-me:active {
+    transform: translateY(-1px);
+}
+
+.modern-hire-me i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.modern-hire-me:hover i {
+    transform: translateX(3px);
+}
+
+/* Alternative Hire Me Button (Outline Style) */
+.modern-hire-me-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Asap', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 35px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.modern-hire-me-outline:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Header Content Container */
+.modern-head-container {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.modern-head-holder {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Social Links in Header */
+.modern-header-social {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+.modern-header-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.modern-header-social a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Scroll Down Indicator */
+.modern-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+.modern-scroll-indicator i {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.modern-scroll-indicator span {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modern-head-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        text-align: center;
+        padding: 60px 20px;
+        max-width: 100%;
+    }
+    
+    .modern-introduction {
+        font-size: 2.8rem !important;
+        margin-bottom: 25px !important;
+    }
+    
+    .modern-animated-text .cd-headline {
+        font-size: 1.6rem !important;
+    }
+    
+    .modern-animated-text .cd-words-wrapper::after {
+        font-size: 1.6rem !important;
+    }
+    
+    .modern-hire-me,
+    .modern-hire-me-outline {
+        padding: 12px 25px !important;
+        font-size: 1rem !important;
+    }
+    
+    .modern-header-social {
+        gap: 15px;
+    }
+    
+    .modern-header-social a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-introduction {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    
+    .modern-animated-text .cd-headline {
+        font-size: 1.4rem;
+    }
+    
+    .modern-animated-text .cd-words-wrapper::after {
+        font-size: 1.4rem;
+    }
+    
+    .modern-hire-me,
+    .modern-hire-me-outline {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .modern-head-container {
+        padding: 40px 0;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .modern-introduction {
+        color: #ffffff;
+    }
+    
+    .modern-animated-text .cd-headline {
+        color: #ffffff;
+    }
+}
+
+/* Hide original styles when modern header is active */
+.header.modern-header .introduction {
+    display: none !important;
+}
+
+.header.modern-header .animated-text {
+    display: none !important;
+}
+
+.header.modern-header .hireMe {
+    display: none !important;
+}
+
+.header.modern-header .head-container {
+    display: none !important;
+}
+
+.header.modern-header .head-holder {
+    display: none !important;
+}
+
+/* Responsive Header Adjustments */
+@media (max-width: 768px) {
+    .header.modern-header .modern-introduction {
+        font-size: 2.5rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .header.modern-header .modern-animated-text .cd-headline {
+        font-size: 1.6rem !important;
+    }
+    
+    .header.modern-header .modern-head-holder {
+        padding: 20px 15px !important;
+    }
+    
+    .header.modern-header .content {
+        min-height: 70vh !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .header.modern-header .modern-introduction {
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .header.modern-header .modern-animated-text .cd-headline {
+        font-size: 1.4rem !important;
+    }
+    
+    .header.modern-header .modern-head-holder {
+        padding: 15px 10px !important;
+    }
+}
+
+/* Ensure header is always visible above fold */
+.header.modern-header {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+}
+
+/* Fix any potential margin/padding issues */
+.header.modern-header .modern-introduction {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.header.modern-header .row.content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Fix for social media links being unclickable due to style.css overlay */
+.header.modern-header::after {
+    display: none !important;
+}

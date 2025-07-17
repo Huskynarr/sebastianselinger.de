@@ -1,0 +1,365 @@
+/* =============================
+   Modern Contact Form Styles
+=============================== */
+
+.modern-contact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.modern-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.modern-contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+.modern-contact-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.modern-contact-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+.modern-contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.modern-contact-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.modern-contact-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.modern-contact-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.modern-form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.modern-form-input,
+.modern-form-textarea {
+    width: 100%;
+    padding: 20px 25px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    background: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+    resize: none;
+}
+
+.modern-form-input:focus,
+.modern-form-textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.modern-form-label {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: #fff;
+    padding: 0 8px;
+    white-space: nowrap;
+}
+
+.modern-form-input:focus + .modern-form-label,
+.modern-form-input:not(:placeholder-shown) + .modern-form-label,
+.modern-form-textarea:focus + .modern-form-label,
+.modern-form-textarea:not(:placeholder-shown) + .modern-form-label {
+    top: -8px;
+    left: 20px;
+    font-size: 12px;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.modern-form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.modern-submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.modern-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.modern-submit-btn:hover::before {
+    left: 100%;
+}
+
+.modern-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.modern-submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.modern-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.modern-contact-info {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.modern-contact-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.modern-contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.modern-contact-method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.modern-contact-method:hover {
+    background: rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+    color: #667eea;
+    text-decoration: none;
+}
+
+.modern-contact-method i {
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+.form-success-message {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: none;
+    animation: slideInDown 0.5s ease;
+}
+
+.form-error-message {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: none;
+    animation: slideInDown 0.5s ease;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animation */
+.modern-submit-btn.loading {
+    pointer-events: none;
+}
+
+.modern-submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modern-contact-wrapper {
+        padding: 40px 25px;
+        margin: 20px;
+        border-radius: 15px;
+    }
+    
+    .modern-contact-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .modern-contact-methods {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .modern-form-input,
+    .modern-form-textarea {
+        padding: 18px 20px;
+    }
+    
+    .modern-form-label {
+        left: 20px;
+    }
+    
+    .modern-form-input:focus + .modern-form-label,
+    .modern-form-input:not(:placeholder-shown) + .modern-form-label,
+    .modern-form-textarea:focus + .modern-form-label,
+    .modern-form-textarea:not(:placeholder-shown) + .modern-form-label {
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-contact {
+        padding: 60px 0;
+    }
+    
+    .modern-contact-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .modern-contact-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .modern-contact-wrapper {
+        background: rgba(30, 30, 30, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .modern-contact-header h2 {
+        color: #fff;
+    }
+    
+    .modern-contact-header p {
+        color: #ccc;
+    }
+    
+    .modern-form-input,
+    .modern-form-textarea {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+    
+    .modern-form-label {
+        background: transparent;
+        color: #ccc;
+        white-space: nowrap;
+    }
+    
+    .modern-contact-info h3 {
+        color: #fff;
+    }
+    
+    .modern-contact-method {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+}

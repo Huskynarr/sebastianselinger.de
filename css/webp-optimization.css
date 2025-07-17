@@ -1,0 +1,43 @@
+
+/* WebP Support with Fallback */
+.webp-support {
+    /* Modern browsers with WebP support will use these */
+}
+
+.no-webp-support {
+    /* Fallback for browsers without WebP support */
+}
+
+/* Optimized background images */
+.slider-1 {
+    background-image: url('../images/slider/background-2.webp');
+}
+
+.no-webp .slider-1 {
+    background-image: url('../images/slider/background-2.jpg');
+}
+
+.slider-2 {
+    background-image: url('../images/slider/background-3.webp');
+}
+
+.no-webp .slider-2 {
+    background-image: url('../images/slider/background-3.jpg');
+}
+
+.slider-3 {
+    background-image: url('../images/slider/background-1.webp');
+}
+
+.no-webp .slider-3 {
+    background-image: url('../images/slider/background-1.jpg');
+}
+
+/* Contact background */
+.contact {
+    background-image: url("../images/backgrounds/contact-us.webp");
+}
+
+.no-webp .contact {
+    background-image: url("../images/backgrounds/contact-us.jpg");
+}

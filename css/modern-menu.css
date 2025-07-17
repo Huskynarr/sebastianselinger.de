@@ -1,0 +1,471 @@
+/* =============================
+   Modern Navigation Menu Styles
+=============================== */
+
+/* Modern Menu Container */
+.modern-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); /* Milchglas-Effekt im Header-Bereich */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modern-menu.scrolled {
+    background: rgba(0, 0, 0, 0.85); /* Schwarzer, transparenter Hintergrund beim Scrollen */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.modern-menu.transparent {
+    background: rgba(255, 255, 255, 0.1); /* Milchglas-Effekt beibehalten */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modern-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Modern Logo */
+.modern-menu-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff; /* Logo-Farbe ist standardmäßig weiß */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stärkerer Schatten für Milchglas */
+}
+
+.modern-menu.scrolled .modern-menu-logo {
+    color: #fff; /* Logo-Farbe bleibt weiß beim Scrollen */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Leichterer Schatten auf dunklem Hintergrund */
+}
+
+.modern-menu-logo:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+    color: #667eea;
+}
+
+.modern-menu-logo i {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Desktop Navigation */
+.modern-desktop-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.modern-nav-item {
+    position: relative;
+}
+
+.modern-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #fff; /* Textfarbe ist standardmäßig weiß */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Stärkerer Textschatten für Milchglas */
+}
+
+.modern-menu.scrolled .modern-nav-link {
+    color: #fff; /* Textfarbe bleibt weiß beim Scrollen */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Leichterer Schatten auf dunklem Hintergrund */
+}
+
+.modern-nav-link i {
+    margin-right: 8px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.modern-nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    transition: left 0.3s ease;
+    border-radius: 25px;
+}
+
+.modern-nav-link:hover::before,
+.modern-nav-link.active::before {
+    left: 0;
+}
+
+.modern-nav-link:hover,
+.modern-nav-link.active {
+    color: #667eea;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.modern-nav-link.active {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+}
+
+.modern-menu.scrolled .modern-nav-link:hover,
+.modern-menu.scrolled .modern-nav-link.active {
+    color: #667eea;
+}
+
+/* Mobile Menu Toggle */
+.modern-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.4); /* Dunkler für bessere Sichtbarkeit auf Milchglas */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modern-menu.scrolled .modern-mobile-toggle {
+    background: rgba(255, 255, 255, 0.1); /* Leichter Hintergrund auf schwarzem Menü */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modern-mobile-toggle:hover {
+    background: rgba(102, 126, 234, 0.2);
+    transform: scale(1.05);
+}
+
+.modern-mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.modern-menu.scrolled .modern-mobile-toggle span {
+    background: #333;
+}
+
+.modern-mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.modern-mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.modern-mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation */
+.modern-mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 999;
+}
+
+.modern-mobile-nav.active {
+    transform: translateX(0);
+}
+
+.modern-mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.modern-mobile-nav-item {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s ease;
+}
+
+.modern-mobile-nav.active .modern-mobile-nav-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modern-mobile-nav.active .modern-mobile-nav-item:nth-child(1) { transition-delay: 0.1s; }
+.modern-mobile-nav.active .modern-mobile-nav-item:nth-child(2) { transition-delay: 0.2s; }
+.modern-mobile-nav.active .modern-mobile-nav-item:nth-child(3) { transition-delay: 0.3s; }
+.modern-mobile-nav.active .modern-mobile-nav-item:nth-child(4) { transition-delay: 0.4s; }
+.modern-mobile-nav.active .modern-mobile-nav-item:nth-child(5) { transition-delay: 0.5s; }
+.modern-mobile-nav.active .modern-mobile-nav-item:nth-child(6) { transition-delay: 0.6s; }
+
+.modern-mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    min-width: 250px;
+}
+
+.modern-mobile-nav-link i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.modern-mobile-nav-link:hover,
+.modern-mobile-nav-link.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: scale(1.05);
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Social Icons in Mobile Menu */
+.modern-mobile-social {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s ease 0.7s;
+}
+
+.modern-mobile-nav.active .modern-mobile-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modern-mobile-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modern-mobile-social a:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Progress Indicator */
+.modern-menu-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Scroll to Top Button */
+.modern-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.modern-scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.modern-scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modern-desktop-nav {
+        display: none;
+    }
+    
+    .modern-mobile-toggle {
+        display: flex;
+    }
+    
+    .modern-menu-container {
+        padding: 15px 20px;
+    }
+    
+    .modern-menu-logo {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-menu-container {
+        padding: 12px 15px;
+    }
+    
+    .modern-menu-logo {
+        font-size: 1.2rem;
+    }
+    
+    .modern-mobile-nav-link {
+        font-size: 1.3rem;
+        min-width: 200px;
+    }
+    
+    .modern-scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+/* Animation for menu items on page load */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modern-nav-item {
+    animation: slideInDown 0.6s ease forwards;
+}
+
+.modern-nav-item:nth-child(1) { animation-delay: 0.1s; }
+.modern-nav-item:nth-child(2) { animation-delay: 0.2s; }
+.modern-nav-item:nth-child(3) { animation-delay: 0.3s; }
+.modern-nav-item:nth-child(4) { animation-delay: 0.4s; }
+.modern-nav-item:nth-child(5) { animation-delay: 0.5s; }
+.modern-nav-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .modern-menu.scrolled {
+        background: rgba(30, 30, 30, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .modern-menu.scrolled .modern-menu-logo,
+    .modern-menu.scrolled .modern-nav-link {
+        color: #fff;
+    }
+    
+    .modern-menu.scrolled .modern-mobile-toggle span {
+        background: #fff;
+    }
+    
+    .modern-menu.scrolled .modern-mobile-toggle {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide original menu when modern menu is active */
+.menu {
+    display: none;
+}
+
+/* Remove body padding for seamless header integration */
+body {
+    padding-top: 0;
+}
+
+/* Ensure header content is not hidden behind menu */
+.header {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 0;
+    }
+}

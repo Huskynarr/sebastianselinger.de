@@ -1,0 +1,662 @@
+/* ============================
+   Modern About Me Section
+   =============================== */
+
+/* About Me Section Base */
+.about-me {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.about-me .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* About Me Holder */
+.about-me-holder {
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+/* Text Section */
+.about-me-text .text-holder {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-me-text .text-holder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-me-text h2 {
+    color: #ffffff !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+    position: relative !important;
+}
+
+.about-me-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    border-radius: 2px;
+}
+
+.about-me-text p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Image Section */
+.about-me-images {
+    position: relative;
+}
+
+.about-me-images img {
+    border-radius: 20px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+    border: 3px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.about-me-images img:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Experience Skills Section */
+.experience-skills {
+    margin-top: 80px;
+}
+
+/* Experience Section */
+.experience {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.experience h3 {
+    color: #ffffff !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Experience Chart */
+.experience-chart {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.experience-chart li {
+    margin-bottom: 25px !important;
+    position: relative !important;
+    padding-left: 20px !important;
+}
+
+.experience-chart li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.single-experience {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.single-experience:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.single-experience h4 {
+    color: #ffffff !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+}
+
+.single-experience span {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9rem !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+.single-experience p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Collapse Button */
+.btn-primary.btn-dark {
+    background: linear-gradient(45deg, #667eea, #764ba2) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 12px 25px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    margin: 20px auto !important;
+    display: block !important;
+}
+
+.btn-primary.btn-dark:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    background: linear-gradient(45deg, #764ba2, #667eea) !important;
+}
+
+/* Skills Section */
+.skills {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.skills h3 {
+    color: #ffffff !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Skills Progress Bar */
+.skills-progress-bar {
+    margin-bottom: 30px;
+}
+
+.skills-progress-bar .clearfix {
+    margin-bottom: 25px;
+}
+
+.skillbar-title {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+.skills-bar-percent {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    float: right !important;
+    font-size: 0.9rem !important;
+}
+
+.skillbar {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    height: 8px !important;
+    margin-top: 10px !important;
+    overflow: hidden !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.skillbar-bar {
+    height: 100% !important;
+    border-radius: 10px !important;
+    transition: width 2s ease-in-out !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.skillbar-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.first-skill {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e) !important;
+}
+
+.second-skill {
+    background: linear-gradient(90deg, #4ecdc4, #7ed6d1) !important;
+}
+
+.third-skill {
+    background: linear-gradient(90deg, #45b7d1, #78c9e0) !important;
+}
+
+.fourth-skill {
+    background: linear-gradient(90deg, #f9ca24, #f0932b) !important;
+}
+
+/* Download CV Links */
+.download-cv {
+    background: linear-gradient(45deg, #667eea, #764ba2) !important;
+    color: #ffffff !important;
+    padding: 15px 30px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+    margin: 10px 0 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    border: 2px solid transparent !important;
+}
+
+.download-cv:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    background: transparent !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Professional Experiences Section */
+#experience.services {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 100px 0;
+    position: relative;
+}
+
+#experience.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+}
+
+#experience.services .container {
+    position: relative;
+    z-index: 2;
+}
+
+#experience .services-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#experience .services-heading .bar {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+#experience .services-heading h2 {
+    color: #ffffff !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Services Icons */
+#experience .services-icon {
+    margin-bottom: 30px; /* Reduzierte margin für besseren Abstand */
+    padding-bottom: 0; /* Kein zusätzliches padding-bottom */
+    margin-left: 10px; /* Reduzierte seitliche Margin */
+    margin-right: 10px;
+}
+
+#experience .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    height: 180px; /* Erhöhte Höhe für bessere Logo-Darstellung */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#experience .image-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+#experience .service-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Reduziertes Padding für mehr Platz */
+    text-align: center;
+}
+
+#experience .service-img img {
+    width: 100%; /* Volle Breite nutzen */
+    height: 100%; /* Volle Höhe nutzen */
+    max-width: 100%; /* Maximale Breite auf 100% */
+    max-height: 100%; /* Maximale Höhe auf 100% */
+    object-fit: contain; /* Proportionen beibehalten */
+    object-position: center; /* Zentrierte Positionierung */
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Zusätzliche Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    #experience .image-wrapper {
+        height: 150px; /* Kleinere Höhe auf mobilen Geräten */
+        margin-bottom: 20px;
+    }
+    
+    #experience .service-img {
+        padding: 10px; /* Weniger Padding auf kleinen Bildschirmen */
+    }
+}
+
+@media (max-width: 576px) {
+    #experience .image-wrapper {
+        height: 120px; /* Noch kleinere Höhe auf sehr kleinen Bildschirmen */
+    }
+    
+    #experience .service-img {
+        padding: 8px;
+    }
+}
+
+/* Overlay */
+#experience .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 15px; /* Padding hinzufügen für bessere Textpositionierung */
+    box-sizing: border-box; /* Padding in die Gesamtgröße einbeziehen */
+}
+
+#experience .image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+#experience .overlay strong {
+    font-size: 1rem; /* Leicht reduzierte Schriftgröße */
+    margin-bottom: 3px; /* Reduzierte Abstände */
+    display: block;
+    line-height: 1.2; /* Kompaktere Zeilenhöhe */
+    font-weight: 600;
+}
+
+#experience .overlay p {
+    font-size: 0.8rem; /* Kleinere Schriftgröße für bessere Platznutzung */
+    line-height: 1.3;
+    margin: 0;
+    opacity: 0.95;
+    overflow: hidden; /* Text nicht über Container hinaus */
+    text-overflow: ellipsis; /* Ellipsis für zu langen Text */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Maximal 4 Zeilen anzeigen */
+    -webkit-box-orient: vertical;
+}
+
+/* Responsive Overlay Anpassungen */
+@media (max-width: 768px) {
+    #experience .overlay {
+        padding: 10px; /* Weniger Padding auf kleineren Bildschirmen */
+    }
+    
+    #experience .overlay strong {
+        font-size: 0.9rem; /* Noch kleinere Schrift auf mobilen Geräten */
+        margin-bottom: 2px;
+    }
+    
+    #experience .overlay p {
+        font-size: 0.75rem;
+        -webkit-line-clamp: 3; /* Weniger Zeilen auf kleineren Bildschirmen */
+        line-clamp: 3;
+    }
+}
+
+@media (max-width: 576px) {
+    #experience .overlay {
+        padding: 8px;
+    }
+    
+    #experience .overlay strong {
+        font-size: 0.85rem;
+        margin-bottom: 1px;
+    }
+    
+    #experience .overlay p {
+        font-size: 0.7rem;
+        -webkit-line-clamp: 2; /* Nur 2 Zeilen auf sehr kleinen Bildschirmen */
+        line-clamp: 2;
+    }
+}
+
+/* Need Service Section */
+#experience .need-service {
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#experience .need-service h1 {
+    color: #ffffff !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 30px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+#experience .need-service a {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+    color: #ffffff !important;
+    padding: 18px 40px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+    border: 2px solid transparent !important;
+}
+
+#experience .need-service a:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3) !important;
+    background: transparent !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Override Bootstrap padding for overlays */
+#experience .overlay.p-2 {
+    padding: 15px !important; /* Überschreibt Bootstrap p-2 Klasse */
+}
+
+#experience .overlay.px-3 {
+    padding-left: 15px !important; /* Überschreibt Bootstrap px-3 Klasse */
+    padding-right: 15px !important;
+}
+
+/* Spezielle Anpassungen für kleinere Container */
+#experience .image-wrapper {
+    position: relative;
+    overflow: hidden; /* Wichtig: Verhindert, dass Overlay-Inhalte herausragen */
+}
+
+#experience .overlay {
+    /* Stelle sicher, dass das Overlay exakt in den Container passt */
+    max-width: 100%;
+    max-height: 100%;
+    word-wrap: break-word; /* Bricht lange Wörter um */
+    hyphens: auto; /* Automatische Silbentrennung */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-me {
+        padding: 60px 0;
+    }
+    
+    .about-me-text .text-holder,
+    .experience,
+    .skills {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .about-me-text h2 {
+        font-size: 2rem !important;
+    }
+    
+    #experience .services-heading h2 {
+        font-size: 2rem !important;
+    }
+    
+    #experience .need-service h1 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-me-text .text-holder,
+    .experience,
+    .skills {
+        padding: 20px;
+    }
+    
+    .about-me-text h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    #experience .services-heading h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    #experience .need-service a {
+        padding: 15px 30px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Experience Section Specific Overrides */
+#experience .services-icon {
+    margin-bottom: 30px; /* Reduzierte margin für besseren Abstand */
+    padding-bottom: 0; /* Kein zusätzliches padding-bottom */
+    margin-left: 10px; /* Reduzierte seitliche Margin */
+    margin-right: 10px;
+}
+
+#experience .row.justify-content-center > .col-lg-4 {
+    padding-left: 20px; /* Reduziertes Padding für bessere Nutzung des Raums */
+    padding-right: 20px;
+}
+
+/* Responsives Design für Experience Logos */
+@media (max-width: 992px) {
+    #experience .row.justify-content-center > .col-lg-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #experience .services-icon {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 20px;
+    }
+    
+    #experience .row.justify-content-center > .col-lg-4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

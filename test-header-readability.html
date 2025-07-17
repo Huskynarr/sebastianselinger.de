@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Readability Test</title>
+    
+    <!-- Font Awesome -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/50bd4685fe.js"></script>
+    
+    <!-- Modern Header CSS -->
+    <link href="./css/modern-header.css" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .test-header {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .comparison-section {
+            padding: 50px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .comparison-section h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .status-indicator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        
+        .status-indicator.success {
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .status-indicator.error {
+            border-left: 5px solid #f44336;
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Header with Modern Design -->
+    <section class="header modern-header test-header" id="home">
+        <div class="container">
+            <div class="row content">
+                <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 modern-head-container">
+                    <div class="modern-head-holder">
+                        <h1 class="modern-introduction">
+                            <span>Hi, I am</span><br>
+                            <span>Sebastian Selinger</span>
+                        </h1>
+                        <div class="modern-animated-text">
+                            <strong class="cd-headline clip">
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible">Fullstack Developer</b>
+                                    <b class="is-hidden">QA Automation Engineer</b>
+                                    <b class="is-hidden">Gaming Industry Expert</b>
+                                    <b class="is-hidden">Quality Assurance Lead</b>
+                                </span>
+                            </strong>
+                        </div>
+                        <a class="modern-hire-me" href="#" onclick="alert('Button funktioniert perfekt!')">
+                            <i class="fas fa-handshake"></i>
+                            Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <h2>Header Readability Test</h2>
+        
+        <div class="status-indicator success">
+            <h3>✅ Erwartetes Verhalten</h3>
+            <ul style="text-align: left;">
+                <li><strong>Text ist klar lesbar</strong> - mit starken Schatten</li>
+                <li><strong>Button ist deutlich sichtbar</strong> - mit Gradient-Hintergrund</li>
+                <li><strong>Cursor am Ende der Wörter</strong> - korrekte Positionierung</li>
+                <li><strong>Professionelle Optik</strong> - moderne Animationen</li>
+            </ul>
+        </div>
+        
+        <div class="status-indicator" id="actual-status">
+            <h3>🔍 Aktueller Status</h3>
+            <p>Wenn Sie diesen Text klar lesen können und der "Hire Me" Button sichtbar ist, funktioniert das Design korrekt.</p>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <a href="index.html" style="display: inline-block; background: #667eea; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: 600;">
+                Zurück zur Hauptseite
+            </a>
+        </div>
+    </section>
+    
+    <!-- Scripts -->
+    <script src="js/modern-header.js"></script>
+    
+    <script>
+        // Test if styles are applied correctly
+        window.addEventListener('load', function() {
+            const introduction = document.querySelector('.modern-introduction');
+            const button = document.querySelector('.modern-hire-me');
+            const statusDiv = document.getElementById('actual-status');
+            
+            if (introduction && button) {
+                const introStyles = window.getComputedStyle(introduction);
+                const buttonStyles = window.getComputedStyle(button);
+                
+                let issues = [];
+                
+                // Check text shadow
+                if (!introStyles.textShadow || introStyles.textShadow === 'none') {
+                    issues.push('Text-Schatten fehlt');
+                }
+                
+                // Check button background
+                if (!buttonStyles.background.includes('gradient') && !buttonStyles.backgroundImage.includes('gradient')) {
+                    issues.push('Button-Gradient fehlt');
+                }
+                
+                if (issues.length === 0) {
+                    statusDiv.className = 'status-indicator success';
+                    statusDiv.innerHTML = '<h3>✅ Alles funktioniert korrekt!</h3><p>Header-Text ist lesbar und Button ist sichtbar.</p>';
+                } else {
+                    statusDiv.className = 'status-indicator error';
+                    statusDiv.innerHTML = '<h3>❌ Probleme gefunden:</h3><ul><li>' + issues.join('</li><li>') + '</li></ul>';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
