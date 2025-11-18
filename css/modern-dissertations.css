@@ -1,0 +1,382 @@
+/* =============================
+   Modern Dissertations Section
+=============================== */
+
+.dissertations {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.dissertations::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.dissertations .container {
+    position: relative;
+    z-index: 2;
+}
+
+.dissertations-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.dissertations-header h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.dissertations-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.dissertations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.dissertation-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dissertation-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.dissertation-card:hover::before {
+    transform: scale(1);
+}
+
+.dissertation-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.dissertation-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.dissertation-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 28px;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dissertation-title-section {
+    flex: 1;
+}
+
+.dissertation-title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.dissertation-university {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.dissertation-year {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dissertation-year i {
+    font-size: 0.85rem;
+}
+
+.dissertation-content {
+    margin-bottom: 25px;
+}
+
+.dissertation-abstract {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.dissertation-details {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.dissertation-detail-item {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.dissertation-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.dissertation-detail-item i {
+    width: 24px;
+    margin-right: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dissertation-detail-label {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.dissertation-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dissertation-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dissertation-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.dissertation-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dissertation-action {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dissertation-action:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dissertation-action.primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dissertation-action.primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.dissertation-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    margin-top: 15px;
+}
+
+.dissertation-status.in-progress {
+    background: rgba(255, 193, 7, 0.2);
+    color: #FFC107;
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* Empty State */
+.dissertations-empty {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.dissertations-empty i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+.dissertations-empty h3 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.dissertations-empty p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dissertations-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dissertations {
+        padding: 80px 0;
+    }
+    
+    .dissertations-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .dissertations-header p {
+        font-size: 1rem;
+    }
+    
+    .dissertation-card {
+        padding: 30px;
+    }
+    
+    .dissertation-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .dissertation-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .dissertation-footer {
+        flex-direction: column;
+    }
+    
+    .dissertation-action {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dissertations-header h2 {
+        font-size: 2rem;
+    }
+    
+    .dissertation-card {
+        padding: 25px;
+    }
+    
+    .dissertation-title {
+        font-size: 1.3rem;
+    }
+    
+    .dissertation-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dissertation-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.dissertation-card:nth-child(1) { animation-delay: 0.1s; }
+.dissertation-card:nth-child(2) { animation-delay: 0.2s; }
+.dissertation-card:nth-child(3) { animation-delay: 0.3s; }
+.dissertation-card:nth-child(4) { animation-delay: 0.4s; }
