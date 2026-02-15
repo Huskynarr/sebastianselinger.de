@@ -1,0 +1,33 @@
+# Sebastian Selinger
+
+> System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert in the Gaming Industry with focus on AR/VR.
+
+## About
+
+Sebastian Selinger is a professional based in Freiburg, Germany, with three main professional pillars:
+
+1. **System Administrator** at the University of Freiburg - IT infrastructure, server management, networking, and virtualization
+2. **IT Consultant** as owner of Selinger Consulting - strategic IT consulting for businesses
+3. **QA Expert** in the gaming industry - quality assurance for AAA games, AR/VR applications (HoloLens, Oculus), and security research
+
+## Contact
+
+- Website: https://sebastianselinger.de
+- LinkedIn: https://www.linkedin.com/in/SebastianSelinger/
+- GitHub: https://github.com/Huskynarr
+- XING: https://www.xing.com/profile/Sebastian_Selinger
+- Contact form: https://sebastianselinger.de/#contact
+
+## Services
+
+- IT Consulting & Advisory
+- System Administration & Infrastructure
+- QA & Testing (Gaming, AR/VR)
+
+## Key Collaborations
+
+Microsoft, Ubisoft, Netflix, Keywords Studios, HashiCorp, Amazon Prime Video, Realworld One, XboxDev
+
+## Full Profile
+
+For the complete profile with all details, see: https://sebastianselinger.de/llms-full.txt

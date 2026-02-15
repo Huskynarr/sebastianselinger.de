@@ -1,0 +1,130 @@
+# Sebastian Selinger - Full Profile
+
+> System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert in the Gaming Industry with focus on AR/VR. Based in Freiburg, Germany.
+
+## Professional Summary
+
+Sebastian Selinger is a versatile IT professional combining system administration, IT consulting, and quality assurance expertise. His career spans university IT infrastructure, independent consulting, and specialized QA work in the gaming and AR/VR sectors.
+
+## Professional Pillars
+
+### 1. University of Freiburg - System Administration
+- Role: System Administrator
+- Responsibilities: IT infrastructure management, server administration, network operations, virtualization
+- Technologies: Linux, Windows Server, Networking, Virtualization (VMware, Proxmox), Monitoring (Zabbix, Grafana)
+- Context: One of Germany's most prestigious universities
+
+### 2. Selinger Consulting - IT Consulting
+- Role: Owner / IT Consultant
+- Focus: Strategic IT consulting for businesses
+- Services: Infrastructure analysis, technology advisory, security audits, process optimization
+- Technologies: Cloud solutions (AWS, Azure), Docker, CI/CD, Ansible, Terraform
+
+### 3. QA & Gaming - Quality Assurance Expert
+- Role: QA Expert specializing in gaming and AR/VR
+- Specializations: AAA game testing, AR/VR quality assurance (HoloLens 2, Oculus, Vive, Index), security research, test automation
+- Technologies: Selenium, Cypress, manual testing methodologies
+
+## Work Experience
+
+### XboxDev - Founder & Editor (2016 - present)
+Founded and manages the XboxDev news portal covering gaming industry and Xbox developer news.
+
+### Keywords Studios - QA Tester (2017 - present)
+Project-based testing of multiplayer AAA games as part of the Global Beta Test Network.
+
+### Realworld One - QA Tester AR/VR (01/2022 - 12/2022)
+Quality assurance for e-learning software in augmented and virtual reality. Focus on HoloLens 2 AR applications, VR platforms (Oculus, Vive, Index).
+
+### Ubisoft - QA Tester (10/2020 - 10/2022)
+Ad-hoc and regression testing of technical alphas (MVP) for AAA videogames.
+
+### Scientific Games - QA Tester (01/2023)
+Quality assurance for gaming applications.
+
+### Freelance Development / QA (2016 - present)
+Independent consulting and development work including website development and quality assurance projects.
+
+## Notable Collaborations
+
+- **Microsoft** - Insider Programs: Pre-testing & QA for Windows, Xbox, and HoloLens platforms
+- **Ubisoft** - AAA Game Testing: Technical alpha and MVP testing
+- **Netflix** - Security Research: HDCP vulnerability analysis for 4K content
+- **Amazon Prime Video** - Security Research: HDCP implementation vulnerability analysis
+- **Keywords Studios** - Global Beta Testing: AAA multiplayer game testing
+- **Blue Byte (Ubisoft)** - Studio Testing: QA for strategy and simulation games
+- **HashiCorp** - Technical Translation: Translation of technical documentation
+- **Realworld One** - AR/VR Testing: QA for e-learning AR/VR applications
+- **Adition Technologies AG** - AdTech: Programming, testing, and documentation
+- **Virtual Minds AG** - Digital Marketing: QA for marketing technology platforms
+- **Viadux** - Software Testing: QA for operations control system software
+- **DAQA** - Game Testing: QA for AAA gaming titles
+
+## Technical Skills
+
+### System Administration
+- Linux / Unix: Expert level
+- Windows Server: Advanced
+- Networking & Security: Advanced
+- Virtualization (VMware, Proxmox): Advanced
+- Monitoring (Zabbix, Grafana): Advanced
+
+### Development
+- Python: Advanced
+- JavaScript / Node.js: Advanced
+- Bash / Shell Scripting: Expert level
+- HTML / CSS: Advanced
+- React: Intermediate
+
+### QA & Testing
+- Manual Testing: Expert level
+- Selenium / Cypress: Advanced
+- AR/VR Testing (HoloLens, Oculus): Advanced
+- Security Testing: Advanced
+
+### Tools & DevOps
+- Docker / Containerization: Advanced
+- CI/CD (Jenkins, GitHub Actions): Advanced
+- Git / Version Control: Expert level
+- Ansible, Terraform: Intermediate
+- AWS, Azure: Intermediate
+- Nginx, Apache: Advanced
+- PostgreSQL, MySQL, Redis: Intermediate
+
+## Services Offered
+
+### IT Consulting & Advisory
+Strategic consulting for IT decisions including infrastructure analysis, technology advisory, security audits, and process optimization.
+
+### System Administration & Infrastructure
+Professional management and optimization of IT systems and network infrastructure including server management, networking, cloud solutions, and monitoring.
+
+### QA & Testing
+Comprehensive quality assurance specialized in gaming and AR/VR: AAA game testing, AR/VR QA, test automation, and security research.
+
+## Selected Projects
+
+- **XboxDev** (2018): Xbox developer platform for gaming industry news and tutorials
+- **Huskynarr.de** (2008): Personal gaming identity project
+- **RBTV.info** (2016-2022): Community project creation and management
+- **Cologna** (2014-2024): Acquisition and development of one of the oldest browser games
+- **Gamescom Countdown** (2018-2023): Countdown website with Discord and Twitter bot integration
+- **HDCP PoC**: Security research on faulty Netflix/Amazon HDCP implementation on Xbox
+- **Gamescom Survival Guide** (2020): Published guide for parents on Amazon
+
+## Contact Information
+
+- Website: https://sebastianselinger.de
+- LinkedIn: https://www.linkedin.com/in/SebastianSelinger/
+- GitHub: https://github.com/Huskynarr
+- XING: https://www.xing.com/profile/Sebastian_Selinger
+- Contact Form: https://sebastianselinger.de/#contact
+
+## Location
+
+Freiburg, Baden-Württemberg, Germany
+
+## Languages
+
+- German (Native)
+- English (Professional)
