@@ -3,43 +3,61 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sebastianselinger.de/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://sebastianselinger.de/images/about-me.jpeg</image:loc>
-      <image:title>Sebastian Selinger - Fullstack Developer and QA Automation Engineer</image:title>
-      <image:caption>Professional portrait of Sebastian Selinger, expert fullstack developer specializing in QA automation and gaming industry</image:caption>
+      <image:title>Sebastian Selinger - Systemadministrator, IT-Berater und QA-Experte</image:title>
+      <image:caption>Sebastian Selinger - System Administrator at University of Freiburg, IT Consultant at Selinger Consulting, QA Expert in Gaming and AR/VR</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://sebastianselinger.de/#about-me</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://sebastianselinger.de/#about</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sebastianselinger.de/#experience</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sebastianselinger.de/#services</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sebastianselinger.de/#skills</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sebastianselinger.de/#portfolio</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sebastianselinger.de/#contact</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sebastianselinger.de/llms.txt</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sebastianselinger.de/llms-full.txt</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

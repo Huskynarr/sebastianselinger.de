@@ -4,8 +4,9 @@ Allow: /
 # Sitemap
 Sitemap: https://sebastianselinger.de/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+# LLM-optimized content
+# See https://sebastianselinger.de/llms.txt for AI-readable summary
+# See https://sebastianselinger.de/llms-full.txt for full AI-readable profile
 
 # Allow all major search engines
 User-agent: Googlebot
@@ -14,19 +15,52 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Slurp
-Allow: /
-
 User-agent: DuckDuckBot
 Allow: /
 
-# Block access to admin and private files
-Disallow: /admin/
-Disallow: /.git/
-Disallow: /tmp/
-Disallow: /logs/
+User-agent: Slurp
+Allow: /
 
-# Allow CSS and JS for better rendering
-Allow: /css/
-Allow: /js/
-Allow: /images/
+# Allow AI crawlers for maximum visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Block access to private directories
+Disallow: /.git/
+Disallow: /css/
+Disallow: /js/
+Disallow: /templates/
+Disallow: /static/
