@@ -701,63 +701,67 @@
 
         .companies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 32px;
-            align-items: center;
-            justify-items: center;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
         }
 
-        .company-logo {
+        .flip-card {
+            perspective: 800px;
+            height: 140px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s ease;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: var(--radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
-            opacity: 0.75;
-            transition: all var(--transition);
-            position: relative;
         }
 
-        .company-logo:hover {
-            opacity: 1;
-            transform: translateY(-3px);
+        .flip-card-front {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 20px;
         }
 
-        .company-logo img {
-            max-height: 40px;
-            max-width: 100px;
+        .flip-card-front img {
+            max-height: 45px;
+            max-width: 110px;
             object-fit: contain;
         }
 
-        .company-logo .company-tooltip {
-            position: absolute;
-            bottom: calc(100% + 8px);
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            padding: 8px 14px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition);
-            pointer-events: none;
-            box-shadow: var(--shadow);
-            z-index: 10;
+        .flip-card-back {
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            transform: rotateY(180deg);
+            flex-direction: column;
+            padding: 16px;
+            text-align: center;
         }
 
-        .company-logo .company-tooltip strong {
-            color: var(--text-primary);
-            display: block;
-            font-size: 0.85rem;
-            margin-bottom: 2px;
+        .flip-card-back strong {
+            color: #fff;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
         }
 
-        .company-logo:hover .company-tooltip {
-            opacity: 1;
-            visibility: visible;
+        .flip-card-back span {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.78rem;
+            line-height: 1.4;
         }
 
         /* ===== CTA Banner ===== */
@@ -943,43 +947,91 @@
         /* ===== Skills ===== */
         .skills { background: var(--bg-secondary); }
 
-        .skills-categories {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+        .skill-tabs {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
         }
 
-        .skill-category h3 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: var(--text-primary);
+        .skill-tab {
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
-        .skill-category h3 svg {
-            width: 20px;
-            height: 20px;
-            color: var(--accent);
+        .skill-tab svg { width: 16px; height: 16px; }
+
+        .skill-tab:hover { border-color: var(--accent); color: var(--accent); }
+
+        .skill-tab.active {
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            color: #fff;
+            border-color: transparent;
         }
 
-        .skill-bar {
-            margin-bottom: 16px;
+        .skill-panel {
+            display: none;
+            animation: fadeUp 0.4s ease;
         }
 
-        .skill-bar-header {
+        .skill-panel.active { display: block; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skill-panel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .skill-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            transition: all var(--transition);
+        }
+
+        .skill-item:hover {
+            border-color: rgba(37, 99, 235, 0.2);
+            background: var(--bg-card-hover);
+        }
+
+        .skill-item-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
-        .skill-bar-header span:first-child { color: var(--text-primary); }
-        .skill-bar-header span:last-child { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.82rem; }
+        .skill-item-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .skill-item-pct {
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+        }
 
         .skill-bar-track {
-            height: 6px;
+            height: 5px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 3px;
             overflow: hidden;
@@ -997,7 +1049,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 32px;
+            margin-top: 40px;
             justify-content: center;
         }
 
@@ -1057,11 +1109,10 @@
             border-radius: var(--radius);
             overflow: hidden;
             transition: all var(--transition);
+            cursor: pointer;
         }
 
-        .portfolio-item.hidden {
-            display: none;
-        }
+        .portfolio-item.hidden { display: none; }
 
         .portfolio-item:hover {
             transform: translateY(-4px);
@@ -1072,7 +1123,27 @@
             aspect-ratio: 16/10;
             overflow: hidden;
             background: var(--bg-secondary);
+            position: relative;
         }
+
+        .portfolio-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .portfolio-item-overlay svg {
+            width: 32px;
+            height: 32px;
+            color: #fff;
+        }
+
+        .portfolio-item:hover .portfolio-item-overlay { opacity: 1; }
 
         .portfolio-item-image img {
             width: 100%;
@@ -1081,29 +1152,124 @@
             transition: transform 0.5s ease;
         }
 
-        .portfolio-item:hover .portfolio-item-image img {
-            transform: scale(1.05);
-        }
+        .portfolio-item:hover .portfolio-item-image img { transform: scale(1.05); }
 
-        .portfolio-item-content {
-            padding: 20px;
-        }
-
-        .portfolio-item-content h3 {
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-        }
-
-        .portfolio-item-content p {
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-            margin-bottom: 12px;
-        }
+        .portfolio-item-content { padding: 20px; }
+        .portfolio-item-content h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .portfolio-item-content p { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px; }
 
         .portfolio-item-date {
             font-size: 0.8rem;
             color: var(--text-muted);
             font-family: var(--font-mono);
+        }
+
+        /* ===== Modal ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 24px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            max-width: 640px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+
+        .modal-body {
+            padding: 28px;
+        }
+
+        .modal-body h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .modal-body .modal-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .modal-body p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .modal-tags span {
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            color: #fff;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            z-index: 1;
+        }
+
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
         }
 
         /* ===== Contact ===== */
@@ -1355,7 +1521,8 @@
         @media (max-width: 1024px) {
             .experience-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .skills-categories { grid-template-columns: 1fr; }
+            .skill-panel-grid { grid-template-columns: 1fr; }
+            .companies-grid { grid-template-columns: repeat(4, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -1379,6 +1546,11 @@
             .companies-grid { grid-template-columns: repeat(3, 1fr); }
             .stats-row { grid-template-columns: repeat(2, 1fr); }
             .hero-cta { flex-direction: column; align-items: center; }
+
+            .skill-tab { padding: 8px 16px; font-size: 0.82rem; }
+            .skill-panel-grid { grid-template-columns: 1fr; }
+
+            .modal-content { max-width: 95vw; }
         }
 
         @media (max-width: 480px) {
@@ -1387,7 +1559,16 @@
             .stats-row { grid-template-columns: repeat(2, 1fr); }
             .hero h1 { font-size: 2.2rem; }
             .cta-buttons { flex-direction: column; align-items: center; }
-            .company-tooltip { display: none; }
+            .flip-card { height: 110px; }
+            .flip-card-front img { max-height: 35px; max-width: 90px; }
+            .skill-tab svg { display: none; }
+        }
+
+        /* Touch device: click to flip */
+        @media (hover: none) {
+            .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+            .flip-card:hover .flip-card-inner { transform: none; }
+            .flip-card.flipped:hover .flip-card-inner { transform: rotateY(180deg); }
         }
     </style>
 </head>
@@ -1588,21 +1769,21 @@
                 <p data-lang-de="Unternehmen, mit denen ich zusammengearbeitet habe" data-lang-en="Companies I have worked with">Unternehmen, mit denen ich zusammengearbeitet habe</p>
             </div>
             <div class="companies-grid reveal">
-                <div class="company-logo"><img src="./images/logos/microsoft.webp" alt="Microsoft" loading="lazy"><span class="company-tooltip"><strong>Microsoft</strong>Insider Programs &amp; QA</span></div>
-                <div class="company-logo"><img src="./images/logos/ubisoft.webp" alt="Ubisoft" loading="lazy"><span class="company-tooltip"><strong>Ubisoft</strong>AAA Game Testing</span></div>
-                <div class="company-logo"><img src="./images/logos/netflix.webp" alt="Netflix" loading="lazy"><span class="company-tooltip"><strong>Netflix</strong>Security Research</span></div>
-                <div class="company-logo"><img src="./images/logos/keywordstudios.svg" alt="Keywords Studios" loading="lazy"><span class="company-tooltip"><strong>Keywords Studios</strong>Global Beta Testing</span></div>
-                <div class="company-logo"><img src="./images/logos/bluebyte.png" alt="Blue Byte" loading="lazy"><span class="company-tooltip"><strong>Blue Byte (Ubisoft)</strong>Studio QA</span></div>
-                <div class="company-logo"><img src="./images/logos/prime-video.webp" alt="Amazon Prime Video" loading="lazy"><span class="company-tooltip"><strong>Amazon Prime Video</strong>Security Research</span></div>
-                <div class="company-logo"><img src="./images/logos/hashicorp.webp" alt="HashiCorp" loading="lazy"><span class="company-tooltip"><strong>HashiCorp</strong>Technical Translation</span></div>
-                <div class="company-logo"><img src="./images/logos/realworld-one.png" alt="Realworld One" loading="lazy"><span class="company-tooltip"><strong>Realworld One</strong>AR/VR Testing</span></div>
-                <div class="company-logo"><img src="./images/logos/xboxdev.webp" alt="XboxDev" loading="lazy"><span class="company-tooltip"><strong>XboxDev</strong>Founder &amp; Editor</span></div>
-                <div class="company-logo"><img src="./images/logos/daqa.png" alt="DAQA" loading="lazy"><span class="company-tooltip"><strong>DAQA</strong>Game Testing</span></div>
-                <div class="company-logo"><img src="./images/logos/scientificgames.webp" alt="Scientific Games" loading="lazy"><span class="company-tooltip"><strong>Scientific Games</strong>QA Testing</span></div>
-                <div class="company-logo"><img src="./images/logos/adition-logo.svg" alt="Adition Technologies" loading="lazy"><span class="company-tooltip"><strong>Adition Technologies</strong>AdTech Development</span></div>
-                <div class="company-logo"><img src="./images/logos/virtualmindsag.png" alt="Virtual Minds AG" loading="lazy"><span class="company-tooltip"><strong>Virtual Minds AG</strong>Marketing Tech QA</span></div>
-                <div class="company-logo"><img src="./images/logos/viadux-logo.webp" alt="Viadux" loading="lazy"><span class="company-tooltip"><strong>Viadux</strong>Software Testing</span></div>
-                <div class="company-logo"><img src="./images/logos/turboadgmbh.webp" alt="Turbo Ad GmbH" loading="lazy"><span class="company-tooltip"><strong>Turbo Ad GmbH</strong>Content Moderation</span></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/microsoft.webp" alt="Microsoft" loading="lazy"></div><div class="flip-card-back"><strong>Microsoft</strong><span>Insider Programs &amp; QA</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/ubisoft.webp" alt="Ubisoft" loading="lazy"></div><div class="flip-card-back"><strong>Ubisoft</strong><span>AAA Game Testing</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/netflix.webp" alt="Netflix" loading="lazy"></div><div class="flip-card-back"><strong>Netflix</strong><span>Security Research</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/keywordstudios.svg" alt="Keywords Studios" loading="lazy"></div><div class="flip-card-back"><strong>Keywords Studios</strong><span>Global Beta Testing</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/bluebyte.png" alt="Blue Byte" loading="lazy"></div><div class="flip-card-back"><strong>Blue Byte (Ubisoft)</strong><span>Studio QA</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/prime-video.webp" alt="Amazon Prime Video" loading="lazy"></div><div class="flip-card-back"><strong>Amazon Prime Video</strong><span>Security Research</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/hashicorp.webp" alt="HashiCorp" loading="lazy"></div><div class="flip-card-back"><strong>HashiCorp</strong><span>Technical Translation</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/realworld-one.png" alt="Realworld One" loading="lazy"></div><div class="flip-card-back"><strong>Realworld One</strong><span>AR/VR Testing</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/xboxdev.webp" alt="XboxDev" loading="lazy"></div><div class="flip-card-back"><strong>XboxDev</strong><span>Founder &amp; Editor</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/daqa.png" alt="DAQA" loading="lazy"></div><div class="flip-card-back"><strong>DAQA</strong><span>Game Testing</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/scientificgames.webp" alt="Scientific Games" loading="lazy"></div><div class="flip-card-back"><strong>Scientific Games</strong><span>QA Testing</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/adition-logo.svg" alt="Adition Technologies" loading="lazy"></div><div class="flip-card-back"><strong>Adition Technologies</strong><span>AdTech Development</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/virtualmindsag.png" alt="Virtual Minds AG" loading="lazy"></div><div class="flip-card-back"><strong>Virtual Minds AG</strong><span>Marketing Tech QA</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/viadux-logo.webp" alt="Viadux" loading="lazy"></div><div class="flip-card-back"><strong>Viadux</strong><span>Software Testing</span></div></div></div>
+                <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./images/logos/turboadgmbh.webp" alt="Turbo Ad GmbH" loading="lazy"></div><div class="flip-card-back"><strong>Turbo Ad GmbH</strong><span>Content Moderation</span></div></div></div>
             </div>
         </div>
     </section>
@@ -1683,94 +1864,54 @@
                 <h2 data-lang-de="Skills" data-lang-en="Skills">Skills</h2>
                 <p data-lang-de="Technische Kompetenzen und Fachgebiete" data-lang-en="Technical competencies and areas of expertise">Technische Kompetenzen und Fachgebiete</p>
             </div>
-            <div class="skills-categories">
-                <div class="skill-category reveal">
-                    <h3>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                        Systemadministration
-                    </h3>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Linux / Unix</span><span>95%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Windows Server</span><span>90%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Networking & Security</span><span>88%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span data-lang-de="Virtualisierung (VMware, Proxmox)" data-lang-en="Virtualization (VMware, Proxmox)">Virtualisierung (VMware, Proxmox)</span><span>90%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-                    </div>
+            <div class="skill-tabs reveal">
+                <button class="skill-tab active" data-tab="sysadmin">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    Systemadministration
+                </button>
+                <button class="skill-tab" data-tab="dev">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    Development
+                </button>
+                <button class="skill-tab" data-tab="qa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    QA &amp; Testing
+                </button>
+                <button class="skill-tab" data-tab="devops">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    Tools &amp; DevOps
+                </button>
+            </div>
+            <div class="skill-panel active" data-panel="sysadmin">
+                <div class="skill-panel-grid">
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Linux / Unix</span><span class="skill-item-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Windows Server</span><span class="skill-item-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Networking &amp; Security</span><span class="skill-item-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name" data-lang-de="Virtualisierung (VMware, Proxmox)" data-lang-en="Virtualization (VMware, Proxmox)">Virtualisierung (VMware, Proxmox)</span><span class="skill-item-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
                 </div>
-                <div class="skill-category reveal">
-                    <h3>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        Development
-                    </h3>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Python</span><span>88%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>JavaScript / Node.js</span><span>85%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Bash / Shell Scripting</span><span>92%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>HTML / CSS</span><span>90%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-                    </div>
+            </div>
+            <div class="skill-panel" data-panel="dev">
+                <div class="skill-panel-grid">
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Python</span><span class="skill-item-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">JavaScript / Node.js</span><span class="skill-item-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Bash / Shell Scripting</span><span class="skill-item-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">HTML / CSS</span><span class="skill-item-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
                 </div>
-                <div class="skill-category reveal">
-                    <h3>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                        QA & Testing
-                    </h3>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span data-lang-de="Manuelles Testing" data-lang-en="Manual Testing">Manuelles Testing</span><span>95%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Selenium / Cypress</span><span>88%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>AR/VR Testing (HoloLens, Oculus)</span><span>85%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Security Testing</span><span>82%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
-                    </div>
+            </div>
+            <div class="skill-panel" data-panel="qa">
+                <div class="skill-panel-grid">
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name" data-lang-de="Manuelles Testing" data-lang-en="Manual Testing">Manuelles Testing</span><span class="skill-item-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Selenium / Cypress</span><span class="skill-item-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">AR/VR Testing (HoloLens, Oculus)</span><span class="skill-item-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Security Testing</span><span class="skill-item-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
                 </div>
-                <div class="skill-category reveal">
-                    <h3>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        Tools & DevOps
-                    </h3>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Docker / Containerisierung</span><span>88%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>CI/CD (Jenkins, GitHub Actions)</span><span>85%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Git / Version Control</span><span>92%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-header"><span>Monitoring (Zabbix, Grafana)</span><span>87%</span></div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
-                    </div>
+            </div>
+            <div class="skill-panel" data-panel="devops">
+                <div class="skill-panel-grid">
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name" data-lang-de="Docker / Containerisierung" data-lang-en="Docker / Containerization">Docker / Containerisierung</span><span class="skill-item-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">CI/CD (Jenkins, GitHub Actions)</span><span class="skill-item-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Git / Version Control</span><span class="skill-item-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+                    <div class="skill-item"><div class="skill-item-header"><span class="skill-item-name">Monitoring (Zabbix, Grafana)</span><span class="skill-item-pct">87%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div></div>
                 </div>
             </div>
             <div class="skill-tags reveal">
@@ -1810,9 +1951,16 @@
                 <button class="portfolio-filter" data-filter="other" data-lang-de="Sonstiges" data-lang-en="Other">Sonstiges</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item reveal" data-category="websites">
+                <div class="portfolio-item reveal" data-category="websites"
+                     data-modal-title="XboxDev"
+                     data-modal-img="./images/projects/xboxdev.com.webp"
+                     data-modal-date="2018"
+                     data-modal-desc-de="XboxDev war ein ambitioniertes Community-Projekt, das ich gegründet habe. Die Plattform bot News, Tutorials und Informationen für Xbox-Entwickler und Gaming-Enthusiasten. Das Projekt umfasste redaktionelle Inhalte, technische Anleitungen und eine aktive Community."
+                     data-modal-desc-en="XboxDev was an ambitious community project I founded. The platform provided news, tutorials, and information for Xbox developers and gaming enthusiasts. The project included editorial content, technical guides, and an active community."
+                     data-modal-tags="WordPress,PHP,Community,Gaming">
                     <div class="portfolio-item-image">
                         <img src="./images/projects/xboxdev.com.webp" alt="XboxDev" loading="lazy">
+                        <div class="portfolio-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     </div>
                     <div class="portfolio-item-content">
                         <h3>XboxDev</h3>
@@ -1820,9 +1968,16 @@
                         <span class="portfolio-item-date">2018</span>
                     </div>
                 </div>
-                <div class="portfolio-item reveal" data-category="websites">
+                <div class="portfolio-item reveal" data-category="websites"
+                     data-modal-title="Huskynarr.de"
+                     data-modal-img="./images/projects/huskynarr.de.webp"
+                     data-modal-date="2008"
+                     data-modal-desc-de="Mein persönliches Langzeit-Projekt rund um meine Gaming-Identität. Über die Jahre mehrfach redesignt und als Plattform für Gaming-Content, persönliche Projekte und Community-Aktivitäten genutzt."
+                     data-modal-desc-en="My personal long-term project around my gaming identity. Redesigned multiple times over the years and used as a platform for gaming content, personal projects, and community activities."
+                     data-modal-tags="Web Development,Gaming,Community">
                     <div class="portfolio-item-image">
                         <img src="./images/projects/huskynarr.de.webp" alt="Huskynarr.de" loading="lazy">
+                        <div class="portfolio-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     </div>
                     <div class="portfolio-item-content">
                         <h3>Huskynarr.de</h3>
@@ -1830,9 +1985,17 @@
                         <span class="portfolio-item-date">2008</span>
                     </div>
                 </div>
-                <div class="portfolio-item reveal" data-category="qa">
+                <div class="portfolio-item reveal" data-category="qa"
+                     data-modal-title-de="NDA-Projekte"
+                     data-modal-title-en="NDA Projects"
+                     data-modal-img="./images/projects/pexels-pixabay-261679.webp"
+                     data-modal-date="2017 - today"
+                     data-modal-desc-de="Zahlreiche QA- und Testing-Projekte für namhafte Unternehmen der Gaming- und Tech-Industrie. Arbeit an AAA-Spieletiteln, AR/VR-Anwendungen und Streaming-Plattformen. Details unterliegen Geheimhaltungsvereinbarungen."
+                     data-modal-desc-en="Numerous QA and testing projects for renowned companies in the gaming and tech industry. Work on AAA game titles, AR/VR applications, and streaming platforms. Details are subject to non-disclosure agreements."
+                     data-modal-tags="QA,Testing,Gaming,AR/VR,NDA">
                     <div class="portfolio-item-image">
                         <img src="./images/projects/pexels-pixabay-261679.webp" alt="NDA Projects" loading="lazy">
+                        <div class="portfolio-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     </div>
                     <div class="portfolio-item-content">
                         <h3 data-lang-de="NDA-Projekte" data-lang-en="NDA Projects">NDA-Projekte</h3>
@@ -1840,9 +2003,16 @@
                         <span class="portfolio-item-date">2017 - today</span>
                     </div>
                 </div>
-                <div class="portfolio-item reveal" data-category="other">
+                <div class="portfolio-item reveal" data-category="other"
+                     data-modal-title="RBTV.info"
+                     data-modal-img="./images/projects/rbtv-page.webp"
+                     data-modal-date="2016 - 2022"
+                     data-modal-desc-de="Community-Projekt für Rocket Beans TV. Entwicklung und Verwaltung der Informationsplattform mit Sendeplänen, Statistiken und Community-Features. Technische Umsetzung mit modernen Web-Technologien."
+                     data-modal-desc-en="Community project for Rocket Beans TV. Development and management of the information platform with schedules, statistics, and community features. Technical implementation with modern web technologies."
+                     data-modal-tags="PHP,JavaScript,API,Community">
                     <div class="portfolio-item-image">
                         <img src="./images/projects/rbtv-page.webp" alt="RBTV.info" loading="lazy">
+                        <div class="portfolio-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     </div>
                     <div class="portfolio-item-content">
                         <h3>RBTV.info</h3>
@@ -1850,9 +2020,16 @@
                         <span class="portfolio-item-date">2016 - 2022</span>
                     </div>
                 </div>
-                <div class="portfolio-item reveal" data-category="other">
+                <div class="portfolio-item reveal" data-category="other"
+                     data-modal-title="Cologna"
+                     data-modal-img="./images/projects/cologna-page.webp"
+                     data-modal-date="2014 - 2024"
+                     data-modal-desc-de="Übernahme, Vertrieb und Weiterentwicklung eines der ältesten Browserspiele auf dem Markt. Verantwortlich für Serveradministration, Feature-Entwicklung, Community-Management und den laufenden Betrieb über 10 Jahre."
+                     data-modal-desc-en="Acquisition, distribution, and development of one of the oldest browser games on the market. Responsible for server administration, feature development, community management, and ongoing operations for over 10 years."
+                     data-modal-tags="PHP,MySQL,Game Development,Server Admin">
                     <div class="portfolio-item-image">
                         <img src="./images/projects/cologna-page.webp" alt="Cologna" loading="lazy">
+                        <div class="portfolio-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     </div>
                     <div class="portfolio-item-content">
                         <h3>Cologna</h3>
@@ -1860,9 +2037,16 @@
                         <span class="portfolio-item-date">2014 - 2024</span>
                     </div>
                 </div>
-                <div class="portfolio-item reveal" data-category="other">
+                <div class="portfolio-item reveal" data-category="other"
+                     data-modal-title="Gamescom Countdown"
+                     data-modal-img="./images/projects/gamescom-cover.webp"
+                     data-modal-date="2018 - 2023"
+                     data-modal-desc-de="Countdown-Website für die Gamescom mit Live-Timer, Event-Informationen und automatisierten Social-Media-Updates. Inklusive Discord-Bot und Twitter-Bot für tägliche Countdown-Posts und Community-Engagement."
+                     data-modal-desc-en="Countdown website for Gamescom with live timer, event information, and automated social media updates. Including Discord bot and Twitter bot for daily countdown posts and community engagement."
+                     data-modal-tags="Node.js,Discord Bot,Twitter API,Web Development">
                     <div class="portfolio-item-image">
                         <img src="./images/projects/gamescom-cover.webp" alt="Gamescom Countdown" loading="lazy">
+                        <div class="portfolio-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     </div>
                     <div class="portfolio-item-content">
                         <h3>Gamescom Countdown</h3>
@@ -1966,6 +2150,20 @@
     <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
+
+    <!-- Portfolio Modal -->
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            <img class="modal-image" id="modal-image" src="" alt="">
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <span class="modal-date" id="modal-date"></span>
+                <p id="modal-desc"></p>
+                <div class="modal-tags" id="modal-tags"></div>
+            </div>
+        </div>
+    </div>
 
     <script>
     (function() {
@@ -2149,6 +2347,106 @@
                 });
             });
         });
+
+        // ===== Portfolio Modal =====
+        var modalOverlay = document.getElementById('portfolio-modal');
+        var modalImage = document.getElementById('modal-image');
+        var modalTitle = document.getElementById('modal-title');
+        var modalDate = document.getElementById('modal-date');
+        var modalDesc = document.getElementById('modal-desc');
+        var modalTags = document.getElementById('modal-tags');
+        var modalCloseBtn = document.getElementById('modal-close');
+
+        portfolioItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                var titleDe = this.getAttribute('data-modal-title-de');
+                var titleEn = this.getAttribute('data-modal-title-en');
+                var title = this.getAttribute('data-modal-title');
+                modalTitle.textContent = (titleDe && titleEn) ? (currentLang === 'de' ? titleDe : titleEn) : (title || '');
+                modalImage.src = this.getAttribute('data-modal-img') || '';
+                modalImage.alt = modalTitle.textContent;
+                modalDate.textContent = this.getAttribute('data-modal-date') || '';
+                modalDesc.textContent = currentLang === 'de'
+                    ? (this.getAttribute('data-modal-desc-de') || '')
+                    : (this.getAttribute('data-modal-desc-en') || '');
+                var tags = this.getAttribute('data-modal-tags');
+                modalTags.innerHTML = '';
+                if (tags) {
+                    tags.split(',').forEach(function(tag) {
+                        var span = document.createElement('span');
+                        span.textContent = tag.trim();
+                        modalTags.appendChild(span);
+                    });
+                }
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) closeModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+        });
+
+        // ===== Flip Cards (touch support) =====
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            document.querySelectorAll('.flip-card').forEach(function(card) {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+            });
+        }
+
+        // ===== Skill Tabs =====
+        var skillTabs = document.querySelectorAll('.skill-tab');
+        var skillPanels = document.querySelectorAll('.skill-panel');
+
+        function animateSkillBars(panel) {
+            panel.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+                bar.style.width = '0';
+                var w = bar.getAttribute('data-width');
+                setTimeout(function() {
+                    if (w) bar.style.width = w + '%';
+                }, 50);
+            });
+        }
+
+        skillTabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var target = this.getAttribute('data-tab');
+                skillTabs.forEach(function(t) { t.classList.remove('active'); });
+                this.classList.add('active');
+                skillPanels.forEach(function(p) {
+                    if (p.getAttribute('data-panel') === target) {
+                        p.classList.add('active');
+                        animateSkillBars(p);
+                    } else {
+                        p.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Animate initial active panel bars when skills section is revealed
+        var skillsSection = document.getElementById('skills');
+        var skillsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var activePanel = skillsSection.querySelector('.skill-panel.active');
+                    if (activePanel) animateSkillBars(activePanel);
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        skillsObserver.observe(skillsSection);
 
         // ===== Contact Form =====
         var form = document.getElementById('contact-form');
