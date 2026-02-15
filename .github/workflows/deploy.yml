@@ -1,0 +1,77 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check index.html exists
+        run: test -f index.html
+
+      - name: Validate HTML structure
+        run: |
+          # Check for essential elements
+          grep -q '<!DOCTYPE html>' index.html
+          grep -q '<html' index.html
+          grep -q '<head>' index.html
+          grep -q '<body>' index.html
+          grep -q '</html>' index.html
+          echo "HTML structure valid"
+
+      - name: Check required files
+        run: |
+          test -f CNAME && echo "CNAME exists"
+          test -f .nojekyll && echo ".nojekyll exists"
+          test -f robots.txt && echo "robots.txt exists"
+          test -f sitemap.xml && echo "sitemap.xml exists"
+          echo "All required files present"
+
+      - name: Validate no redirect to external sites
+        run: |
+          ! grep -q 'window.location.href' index.html || { echo "ERROR: External redirect found"; exit 1; }
+          ! grep -q 'http-equiv="refresh"' index.html || { echo "ERROR: Meta refresh redirect found"; exit 1; }
+          echo "No unwanted redirects found"
+
+      - name: Check meta tags
+        run: |
+          grep -q 'meta name="description"' index.html && echo "Description meta tag found"
+          grep -q 'og:title' index.html && echo "Open Graph tags found"
+          grep -q 'application/ld+json' index.html && echo "Structured data found"
+
+  deploy:
+    name: Deploy
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
