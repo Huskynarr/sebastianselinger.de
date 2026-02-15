@@ -1802,18 +1802,6 @@
             initRotator();
         }
 
-        document.getElementById('lang-toggle').addEventListener('click', function() {
-            setLanguage(currentLang === 'de' ? 'en' : 'de');
-        });
-
-        document.getElementById('lang-toggle-mobile').addEventListener('click', function() {
-            setLanguage(currentLang === 'de' ? 'en' : 'de');
-            closeMobileNav();
-        });
-
-        // Apply detected language on load
-        setLanguage(currentLang);
-
         // ===== Text Rotator =====
         var rotatorWords = {
             de: ['Systemadministrator', 'IT-Berater', 'QA-Experte'],
@@ -1844,7 +1832,18 @@
         }
 
         rotatorEl.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-        initRotator();
+
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            setLanguage(currentLang === 'de' ? 'en' : 'de');
+        });
+
+        document.getElementById('lang-toggle-mobile').addEventListener('click', function() {
+            setLanguage(currentLang === 'de' ? 'en' : 'de');
+            closeMobileNav();
+        });
+
+        // Apply detected language on load
+        setLanguage(currentLang);
 
         // ===== Mobile Navigation =====
         var mobileToggle = document.getElementById('mobile-toggle');
@@ -1926,7 +1925,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0 });
 
         document.querySelectorAll('.reveal').forEach(function(el) {
             observer.observe(el);
