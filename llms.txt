@@ -1,14 +1,14 @@
 # Sebastian Selinger
 
-> System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert in the Gaming Industry with focus on AR/VR.
+> System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert with 10+ years of professional experience. Based in Freiburg, Germany. Available for projects in the DACH region.
 
 ## About
 
-Sebastian Selinger is a professional based in Freiburg, Germany, with three main professional pillars:
+Sebastian Selinger is an IT professional based in Freiburg, Germany, with three main professional pillars:
 
-1. **System Administrator** at the University of Freiburg - IT infrastructure, server management, networking, and virtualization
-2. **IT Consultant** as owner of Selinger Consulting - strategic IT consulting for businesses
-3. **QA Expert** in the gaming industry - quality assurance for AAA games, AR/VR applications (HoloLens, Oculus), and security research
+1. **System Administrator** at the University of Freiburg - IT infrastructure for 25,000+ users, high availability, server management, networking, and virtualization
+2. **IT Consultant** as owner of Selinger Consulting - strategic IT consulting, security audits, infrastructure optimization, and measurable ROI for businesses
+3. **QA Expert** - quality assurance for enterprise software, test automation, and security research with recognized contributions to Microsoft, Netflix, and Amazon
 
 ## Contact
 
@@ -20,13 +20,14 @@ Sebastian Selinger is a professional based in Freiburg, Germany, with three main
 
 ## Services
 
-- IT Consulting & Advisory
-- System Administration & Infrastructure
-- QA & Testing (Gaming, AR/VR)
+- IT Consulting & Strategic Advisory
+- System Administration & Infrastructure Management
+- Quality Assurance & Test Automation
+- Security Audits & Compliance
 
 ## Key Collaborations
 
-Microsoft, Ubisoft, Netflix, Keywords Studios, HashiCorp, Amazon Prime Video, Realworld One, XboxDev
+Microsoft, Ubisoft, Netflix, Keywords Studios, HashiCorp, Amazon Prime Video, Realworld One, Scientific Games, Virtual Minds AG, Adition Technologies, Viadux, DAQA
 
 ## Full Profile
 

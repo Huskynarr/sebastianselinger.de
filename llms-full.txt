@@ -1,64 +1,73 @@
 # Sebastian Selinger - Full Profile
 
-> System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert in the Gaming Industry with focus on AR/VR. Based in Freiburg, Germany.
+> System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert with 10+ years of professional experience. Based in Freiburg, Germany. Available for projects in the DACH region.
 
 ## Professional Summary
 
-Sebastian Selinger is a versatile IT professional combining system administration, IT consulting, and quality assurance expertise. His career spans university IT infrastructure, independent consulting, and specialized QA work in the gaming and AR/VR sectors.
+Sebastian Selinger is a versatile IT professional combining system administration, IT consulting, and quality assurance expertise. His career spans enterprise IT infrastructure at one of Germany's most prestigious universities, independent consulting delivering measurable results for businesses, and specialized QA work for international technology companies including Microsoft, Netflix, and Amazon.
 
 ## Professional Pillars
 
 ### 1. University of Freiburg - System Administration
 - Role: System Administrator
-- Responsibilities: IT infrastructure management, server administration, network operations, virtualization
+- Responsibilities: High-availability IT infrastructure for 25,000+ users, server administration, network operations, virtualization, IT security
 - Technologies: Linux, Windows Server, Networking, Virtualization (VMware, Proxmox), Monitoring (Zabbix, Grafana)
-- Context: One of Germany's most prestigious universities
+- Context: Albert-Ludwigs-Universität Freiburg, one of Germany's leading research universities
 
 ### 2. Selinger Consulting - IT Consulting
 - Role: Owner / IT Consultant
-- Focus: Strategic IT consulting for businesses
-- Services: Infrastructure analysis, technology advisory, security audits, process optimization
+- Focus: Strategic IT consulting with measurable ROI for businesses
+- Services: Infrastructure analysis, technology advisory, security audits, IT governance, compliance, process optimization
 - Technologies: Cloud solutions (AWS, Azure), Docker, CI/CD, Ansible, Terraform
+- Area: DACH region (Germany, Austria, Switzerland)
 
-### 3. QA & Gaming - Quality Assurance Expert
-- Role: QA Expert specializing in gaming and AR/VR
-- Specializations: AAA game testing, AR/VR quality assurance (HoloLens 2, Oculus, Vive, Index), security research, test automation
+### 3. Quality Assurance - QA Expert
+- Role: QA Expert specializing in enterprise software and security research
+- Specializations: Enterprise software testing, test automation, security research, compliance testing
 - Technologies: Selenium, Cypress, manual testing methodologies
+- Recognition: Bug bounty acknowledgments from Microsoft, Netflix, Amazon
 
 ## Work Experience
 
+### University of Freiburg - System Administrator (current)
+Managing IT infrastructure for one of Germany's leading research universities. Ensuring high availability, IT security, and reliable operations for 25,000+ users.
+
+### Selinger Consulting - Owner & IT Consultant (current)
+Strategic IT consulting for businesses in the DACH region. Infrastructure optimization, security audits, and technology advisory with focus on measurable outcomes.
+
 ### XboxDev - Founder & Editor (2016 - present)
-Founded and manages the XboxDev news portal covering gaming industry and Xbox developer news.
+Founded and manages a community platform with user management and content delivery systems.
 
 ### Keywords Studios - QA Tester (2017 - present)
-Project-based testing of multiplayer AAA games as part of the Global Beta Test Network.
+Project-based testing for international technology companies as part of the Global Beta Test Network.
 
-### Realworld One - QA Tester AR/VR (01/2022 - 12/2022)
-Quality assurance for e-learning software in augmented and virtual reality. Focus on HoloLens 2 AR applications, VR platforms (Oculus, Vive, Index).
+### Realworld One - QA Tester (01/2022 - 12/2022)
+Quality assurance for enterprise e-learning software including augmented and virtual reality platforms.
 
 ### Ubisoft - QA Tester (10/2020 - 10/2022)
-Ad-hoc and regression testing of technical alphas (MVP) for AAA videogames.
+Ad-hoc and regression testing of business-critical software products for an international technology company.
 
 ### Scientific Games - QA Tester (01/2023)
-Quality assurance for gaming applications.
+Quality assurance for enterprise software applications.
 
 ### Freelance Development / QA (2016 - present)
-Independent consulting and development work including website development and quality assurance projects.
+Independent consulting and development work including web development and quality assurance projects.
 
 ## Notable Collaborations
 
-- **Microsoft** - Insider Programs: Pre-testing & QA for Windows, Xbox, and HoloLens platforms
-- **Ubisoft** - AAA Game Testing: Technical alpha and MVP testing
-- **Netflix** - Security Research: HDCP vulnerability analysis for 4K content
-- **Amazon Prime Video** - Security Research: HDCP implementation vulnerability analysis
-- **Keywords Studios** - Global Beta Testing: AAA multiplayer game testing
-- **Blue Byte (Ubisoft)** - Studio Testing: QA for strategy and simulation games
-- **HashiCorp** - Technical Translation: Translation of technical documentation
-- **Realworld One** - AR/VR Testing: QA for e-learning AR/VR applications
-- **Adition Technologies AG** - AdTech: Programming, testing, and documentation
+- **Microsoft** - Insider Programs: Pre-testing & QA for Windows, Xbox, and HoloLens platforms. Bug bounty recognition.
+- **Ubisoft** - Enterprise QA: Technical alpha and MVP testing for international software products
+- **Netflix** - Security Research: HDCP vulnerability analysis. Security research recognition.
+- **Amazon Prime Video** - Security Research: HDCP implementation vulnerability analysis. Security research recognition.
+- **Keywords Studios** - Global QA: Enterprise software testing for international clients
+- **Blue Byte (Ubisoft)** - Software Testing: QA for strategy and simulation software
+- **HashiCorp** - Technical Translation: Translation of technical documentation for enterprise DevOps tools
+- **Realworld One** - Enterprise QA: Quality assurance for e-learning platforms
+- **Adition Technologies AG** - AdTech: Programming, testing, and documentation for advertising technology
 - **Virtual Minds AG** - Digital Marketing: QA for marketing technology platforms
-- **Viadux** - Software Testing: QA for operations control system software
-- **DAQA** - Game Testing: QA for AAA gaming titles
+- **Viadux** - Operations Software: QA for operations control system software
+- **DAQA** - Software Testing: QA for enterprise software products
+- **TurboAd GmbH** - AdTech: Quality assurance for advertising technology
 
 ## Technical Skills
 
@@ -68,6 +77,7 @@ Independent consulting and development work including website development and qu
 - Networking & Security: Advanced
 - Virtualization (VMware, Proxmox): Advanced
 - Monitoring (Zabbix, Grafana): Advanced
+- High Availability & SLA Management: Advanced
 
 ### Development
 - Python: Advanced
@@ -78,9 +88,9 @@ Independent consulting and development work including website development and qu
 
 ### QA & Testing
 - Manual Testing: Expert level
-- Selenium / Cypress: Advanced
-- AR/VR Testing (HoloLens, Oculus): Advanced
-- Security Testing: Advanced
+- Test Automation (Selenium, Cypress): Advanced
+- Security Testing & Research: Advanced
+- Compliance Testing: Advanced
 
 ### Tools & DevOps
 - Docker / Containerization: Advanced
@@ -93,24 +103,24 @@ Independent consulting and development work including website development and qu
 
 ## Services Offered
 
-### IT Consulting & Advisory
-Strategic consulting for IT decisions including infrastructure analysis, technology advisory, security audits, and process optimization.
+### IT Consulting & Strategic Advisory
+Strategic consulting for IT decisions including infrastructure analysis, technology advisory, security audits, IT governance, compliance, and process optimization. Focus on measurable outcomes and clear ROI.
 
 ### System Administration & Infrastructure
-Professional management and optimization of IT systems and network infrastructure including server management, networking, cloud solutions, and monitoring.
+Professional management and optimization of IT systems and network infrastructure. Server management, networking, cloud solutions, monitoring, high availability, incident response, and SLA management.
 
-### QA & Testing
-Comprehensive quality assurance specialized in gaming and AR/VR: AAA game testing, AR/VR QA, test automation, and security research.
+### Quality Assurance & Testing
+Comprehensive quality assurance for enterprise software: test automation, security research, compliance testing, and software quality management for international technology companies.
 
 ## Selected Projects
 
-- **XboxDev** (2018): Xbox developer platform for gaming industry news and tutorials
-- **Huskynarr.de** (2008): Personal gaming identity project
-- **RBTV.info** (2016-2022): Community project creation and management
-- **Cologna** (2014-2024): Acquisition and development of one of the oldest browser games
-- **Gamescom Countdown** (2018-2023): Countdown website with Discord and Twitter bot integration
-- **HDCP PoC**: Security research on faulty Netflix/Amazon HDCP implementation on Xbox
-- **Gamescom Survival Guide** (2020): Published guide for parents on Amazon
+- **XboxDev** (2018): Community platform with user management and content delivery systems
+- **Huskynarr.de** (2008): Long-running web project with multiple redesigns and technology migrations
+- **RBTV.info** (2016-2022): Community platform development and management
+- **Cologna** (2014-2024): 10-year operation of a web platform including acquisition, development, and user management
+- **Gamescom Countdown** (2018-2023): Automated event platform with Discord and Twitter bot integration
+- **HDCP PoC**: Security research on HDCP implementation vulnerabilities (Netflix, Amazon)
+- **Gamescom Survival Guide** (2020): Published guide on Amazon
 
 ## Contact Information
 
@@ -123,6 +133,7 @@ Comprehensive quality assurance specialized in gaming and AR/VR: AAA game testin
 ## Location
 
 Freiburg, Baden-Württemberg, Germany
+Available for projects in the DACH region (Germany, Austria, Switzerland)
 
 ## Languages
 
