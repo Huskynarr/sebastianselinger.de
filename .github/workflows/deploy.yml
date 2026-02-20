@@ -21,6 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify generated language pages
+        run: |
+          ./scripts/generate-language-pages.sh
+          git diff --exit-code de/index.html en/index.html
+
       - name: Check index.html exists
         run: test -f index.html
 

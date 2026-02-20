@@ -96,6 +96,9 @@ python index.py
 
 # Run on different port
 python -c "from index import app; app.run(debug=True, port=8000)"
+
+# Regenerate language landing pages after editing index.html
+./scripts/generate-language-pages.sh
 ```
 
 ## Deployment
@@ -163,8 +166,13 @@ sebastianselinger.de/
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # Search engine instructions
 ├── README.md               # Project documentation
-├── templates/
-│   └── index.html          # Main HTML template
+├── index.html              # Main HTML source (single source of truth)
+├── de/
+│   └── index.html          # Generated German landing page
+├── en/
+│   └── index.html          # Generated English landing page
+├── scripts/
+│   └── generate-language-pages.sh  # Regenerates /de and /en pages from index.html
 ├── css/
 │   ├── style.css           # Main stylesheet
 │   ├── responsive.css      # Responsive design
@@ -190,13 +198,13 @@ sebastianselinger.de/
 The Flask app is configured in `index.py`:
 
 ```python
-from flask import Flask, render_template
+from flask import Flask, send_from_directory
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return send_from_directory('.', 'index.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
