@@ -99,7 +99,7 @@ DATA = {
             ("Gamescom Countdown", "Automatisierte Event-Plattform mit Discord-/Twitter-Bots", "2018–2023"),
             ("Huskynarr.de", "Persönliches Web-Langzeitprojekt mit mehreren Redesigns", "seit 2008"),
         ],
-        "languages": [("Deutsch", "Muttersprache"), ("Englisch", "Verhandlungssicher")],
+        "languages": [("Deutsch", "Muttersprache"), ("Englisch", "Verhandlungssicher"), ("Französisch", "Grundkenntnisse / A1")],
         "location_label": "Freiburg, Deutschland · DACH-Region",
     },
     "en": {
@@ -168,7 +168,7 @@ DATA = {
             ("Gamescom Countdown", "Automated event platform with Discord/Twitter bots", "2018–2023"),
             ("Huskynarr.de", "Personal long-term web project with multiple redesigns", "since 2008"),
         ],
-        "languages": [("German", "Native"), ("English", "Professional working proficiency")],
+        "languages": [("German", "Native"), ("English", "Professional working proficiency"), ("French", "Basic / A1")],
         "location_label": "Freiburg, Germany · DACH region",
     },
 }

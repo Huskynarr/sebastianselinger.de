@@ -78,7 +78,6 @@ Independent consulting and development work including web development and qualit
 - **Virtual Minds AG** - Digital Marketing: QA for marketing technology platforms
 - **Viadux** - Operations Software: QA for operations control system software
 - **DAQA** - Software Testing: QA for enterprise software products
-- **TurboAd GmbH** - AdTech: Quality assurance for advertising technology
 
 ## Technical Skills
 
