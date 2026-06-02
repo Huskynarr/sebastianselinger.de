@@ -328,8 +328,9 @@ def render_html(lang, variant):
     --a:#2563eb; --b:#0d9488; --side:#0c1117;
   }}
   html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:var(--ink); font-size:9.2px; line-height:1.46; }}
-  .page {{ width:210mm; min-height:297mm; display:grid; grid-template-columns:64mm 1fr; }}
-  .side {{ background:var(--side); color:#e6edf3; padding:13mm 8mm; }}
+  body {{ background:#fff; }}
+  /* Fixed sidebar repeats full-height on every printed page (no cut-off on page 2) */
+  .side {{ position:fixed; top:0; bottom:0; left:0; width:64mm; background:var(--side); color:#e6edf3; padding:13mm 8mm; overflow:hidden; }}
   .side .photo {{ width:36mm; height:36mm; border-radius:50%; object-fit:cover; display:block; margin:0 auto 5mm; border:2px solid var(--a); }}
   .side h1 {{ font-size:16px; color:#fff; text-align:center; line-height:1.2; }}
   .side .label {{ text-align:center; font-size:8.6px; color:#8b97a3; margin:2.5mm 0 6mm; }}
@@ -342,7 +343,7 @@ def render_html(lang, variant):
   .skillgroup h4 {{ font-size:8.6px; color:#fff; margin-bottom:1.3mm; }}
   .chips, .tags {{ display:flex; flex-wrap:wrap; gap:1.2mm; }}
   .chip {{ background:rgba(37,99,235,.22); color:#dbeafe; border-radius:1.8mm; padding:.4mm 1.5mm; font-size:7.6px; }}
-  .main {{ padding:13mm 10mm; }}
+  .main {{ margin-left:64mm; padding:13mm 10mm; }}
   .name-row {{ border-bottom:2px solid var(--a); padding-bottom:2.6mm; margin-bottom:4mm; }}
   .name-row h2 {{ font-size:12.5px; background:linear-gradient(135deg,var(--a),var(--b));
     -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }}
@@ -363,7 +364,6 @@ def render_html(lang, variant):
 </style>
 </head>
 <body>
-<div class="page">
   <aside class="side">
     {photo_block}
     <h1>Sebastian Selinger</h1>
@@ -388,7 +388,6 @@ def render_html(lang, variant):
     <h3>{esc(s["skills"])}</h3>
     <div class="skills-main">{skills_html}</div>
   </main>
-</div>
 </body>
 </html>"""
 
