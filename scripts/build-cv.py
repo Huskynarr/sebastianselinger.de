@@ -47,7 +47,7 @@ DATA = {
             "projects": "Projekte", "languages": "Sprachen", "contact": "Kontakt",
         },
         "work": [
-            ("Universität Freiburg", "Systemadministrator", "seit 2024", "2024-01", "",
+            ("Universität Freiburg", "Systemadministrator", "seit 09/2025", "2025-09", "",
              "Betrieb und Absicherung der IT-Infrastruktur für über 25.000 Nutzer: Server-Administration, Netzwerk, Virtualisierung und Monitoring.",
              ["Linux", "Windows Server", "Virtualisierung", "Monitoring"]),
             ("Viadux Einsatzleitsysteme OHG", "QA & Software-Analyse", "11/2023 – 01/2024", "2023-11", "2024-01",
@@ -116,7 +116,7 @@ DATA = {
             "projects": "Projects", "languages": "Languages", "contact": "Contact",
         },
         "work": [
-            ("University of Freiburg", "System Administrator", "since 2024", "2024-01", "",
+            ("University of Freiburg", "System Administrator", "since 09/2025", "2025-09", "",
              "Operating and securing the IT infrastructure for 25,000+ users: server administration, networking, virtualization, and monitoring.",
              ["Linux", "Windows Server", "Virtualization", "Monitoring"]),
             ("Viadux Einsatzleitsysteme OHG", "QA & Software Analysis", "11/2023 – 01/2024", "2023-11", "2024-01",
