@@ -58,9 +58,6 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-# Block access to private directories
+# Block access to internal directories
+# Note: CSS/JS are intentionally crawlable so search engines can render the page
 Disallow: /.git/
-Disallow: /css/
-Disallow: /js/
-Disallow: /templates/
-Disallow: /static/
