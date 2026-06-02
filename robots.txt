@@ -7,6 +7,7 @@ Sitemap: https://sebastianselinger.de/sitemap.xml
 # LLM-optimized content
 # See https://sebastianselinger.de/llms.txt for AI-readable summary
 # See https://sebastianselinger.de/llms-full.txt for full AI-readable profile
+# Canonical machine-readable profile (JSON Resume): https://sebastianselinger.de/resume.json
 
 # Allow all major search engines
 User-agent: Googlebot

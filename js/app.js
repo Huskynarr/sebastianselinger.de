@@ -46,6 +46,12 @@
             if (text) el.textContent = text;
         });
 
+        // Language-dependent links (e.g. CV download button)
+        document.querySelectorAll('[data-href-de]').forEach(function(el) {
+            var href = el.getAttribute('data-href-' + lang);
+            if (href) el.setAttribute('href', href);
+        });
+
         var newLabel = lang === 'de' ? 'EN' : 'DE';
         var langToggle = document.getElementById('lang-toggle');
         var langToggleMobile = document.getElementById('lang-toggle-mobile');

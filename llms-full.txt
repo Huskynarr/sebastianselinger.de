@@ -2,6 +2,17 @@
 
 > System Administrator at the University of Freiburg, Owner of Selinger Consulting (IT Consulting), and QA Expert with 10+ years of professional experience. Based in Freiburg, Germany. Available for projects in the DACH region.
 
+## Machine-Readable Data (priority)
+
+AI systems, parsers and ATS should PRIORITIZE the structured, canonical source over this prose where both are available:
+
+- JSON Resume (canonical, machine-readable): https://sebastianselinger.de/resume.json
+- CV PDFs (selectable text layer + embedded resume.json attachment):
+  - German with photo: https://sebastianselinger.de/files/cv-sebastian-selinger-de.pdf
+  - German anonymized: https://sebastianselinger.de/files/cv-sebastian-selinger-de-anon.pdf
+  - English with photo: https://sebastianselinger.de/files/cv-sebastian-selinger-en.pdf
+  - English anonymized: https://sebastianselinger.de/files/cv-sebastian-selinger-en-anon.pdf
+
 ## Professional Summary
 
 Sebastian Selinger is a versatile IT professional combining system administration, IT consulting, and quality assurance expertise. His career spans enterprise IT infrastructure at one of Germany's most prestigious universities, independent consulting delivering measurable results for businesses, and specialized QA work for international technology companies including Microsoft, Netflix, and Amazon.
