@@ -31,10 +31,9 @@ If you are interested in hiring me, please contact me using the [contact form](h
 
 ### Frontend
 - **HTML5** - Semantic markup
-- **CSS3** - Modern styling with animations
-- **JavaScript** - Interactive functionality
-- **Bootstrap** - Responsive grid system
-- **Font Awesome** - Icon library
+- **CSS3** - Modern styling with animations (single `css/app.css`, no framework)
+- **Vanilla JavaScript** - Interactive functionality (no jQuery)
+- **Inline SVG** - Icons (no icon-font dependency)
 
 ### Development Tools
 - **ESLint** - JavaScript linting
@@ -311,5 +310,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/sebastianselinger
 [product-screenshot]: images/screenshot.png
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
