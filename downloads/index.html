@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-de="Zertifikate &amp; Downloads | Sebastian Selinger" data-lang-en="Certificates &amp; Downloads | Sebastian Selinger">Zertifikate &amp; Downloads | Sebastian Selinger</title>
+    
+    <!-- Hidden page from search engines -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Sebastian Selinger">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/downloads.css">
+    
+    <!-- Google Analytics (loaded only after explicit consent — see /js/analytics.js) -->
+    <script defer src="/js/analytics.js"></script>
+    <script src="/js/lang-init.js"></script>
+    
+    <!-- Data and logic for Downloads -->
+    <script src="/js/downloads-data.js"></script>
+    <script defer src="/js/downloads.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content" data-lang-de="Zum Inhalt springen" data-lang-en="Skip to content">Zum Inhalt springen</a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <span class="logo-bracket">&lt;</span><span class="logo-space"></span>Sebastian Selinger<span class="logo-space"></span><span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#about" data-lang-de="Über mich" data-lang-en="About">Über mich</a>
+                <a href="/#experience" data-lang-de="Erfahrung" data-lang-en="Experience">Erfahrung</a>
+                <a href="/#companies" data-lang-de="Referenzen" data-lang-en="References">Referenzen</a>
+                <a href="/#services" data-lang-de="Services" data-lang-en="Services">Services</a>
+                <a href="/#skills" data-lang-de="Skills" data-lang-en="Skills">Skills</a>
+                <a href="/#certificates" data-lang-de="Zertifikate" data-lang-en="Certificates">Zertifikate</a>
+                <a href="/#contact" data-lang-de="Kontakt" data-lang-en="Contact">Kontakt</a>
+                <button class="nav-lang" id="lang-toggle" aria-label="Switch language">EN</button>
+            </div>
+            <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-mobile" id="mobile-nav" aria-hidden="true">
+        <a href="/#about" data-lang-de="Über mich" data-lang-en="About">Über mich</a>
+        <a href="/#experience" data-lang-de="Erfahrung" data-lang-en="Experience">Erfahrung</a>
+        <a href="/#companies" data-lang-de="Referenzen" data-lang-en="References">Referenzen</a>
+        <a href="/#services" data-lang-de="Services" data-lang-en="Services">Services</a>
+        <a href="/#skills" data-lang-de="Skills" data-lang-en="Skills">Skills</a>
+        <a href="/#certificates" data-lang-de="Zertifikate" data-lang-en="Certificates">Zertifikate</a>
+        <a href="/#contact" data-lang-de="Kontakt" data-lang-en="Contact">Kontakt</a>
+        <button class="nav-lang" id="lang-toggle-mobile" aria-label="Switch language">EN</button>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="downloads-section">
+            <div class="container">
+                <div class="downloads-header">
+                    <h1 data-lang-de="Downloads &amp; Zertifikate" data-lang-en="Downloads &amp; Certificates">Downloads &amp; Zertifikate</h1>
+                    <p data-lang-de="Hier finden Sie eine Übersicht meiner Nachweise, Qualifikationen und LinkedIn Learning Zertifikate zum Anschauen und Herunterladen." data-lang-en="Here you can find an overview of my credentials, qualifications, and LinkedIn Learning certificates to view and download.">Hier finden Sie eine Übersicht meiner Nachweise, Qualifikationen und LinkedIn Learning Zertifikate zum Anschauen und Herunterladen.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="search-certs" class="search-input" placeholder="Nach Zertifikaten suchen..." data-lang-de="Nach Zertifikaten suchen..." data-lang-en="Search certificates..." aria-label="Search certificates">
+                    </div>
+                </div>
+
+                <!-- Accordion Menu (Ziharmonika-Menü) -->
+                <div class="accordion">
+                    <!-- Section 1: Allgemein (Sonstiges) -->
+                    <div class="accordion-item active" data-id="allgemein">
+                        <button class="accordion-header" aria-expanded="true" aria-controls="body-allgemein">
+                            <div class="accordion-header-left">
+                                <span data-lang-de="Allgemein" data-lang-en="General">Allgemein</span>
+                                <span class="accordion-badge" id="badge-allgemein">0</span>
+                            </div>
+                            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-body" id="body-allgemein" style="max-height: none;">
+                            <div class="accordion-content">
+                                <div class="cert-list" id="list-allgemein">
+                                    <!-- Rendered dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: PMI -->
+                    <div class="accordion-item" data-id="pmi">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="body-pmi">
+                            <div class="accordion-header-left">
+                                <span data-lang-de="PMI" data-lang-en="PMI">PMI</span>
+                                <span class="accordion-badge" id="badge-pmi">0</span>
+                            </div>
+                            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-body" id="body-pmi">
+                            <div class="accordion-content">
+                                <div class="cert-list" id="list-pmi">
+                                    <!-- Rendered dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: LinkedIn -->
+                    <div class="accordion-item" data-id="linkedin">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="body-linkedin">
+                            <div class="accordion-header-left">
+                                <span data-lang-de="LinkedIn" data-lang-en="LinkedIn">LinkedIn</span>
+                                <span class="accordion-badge" id="badge-linkedin">0</span>
+                            </div>
+                            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-body" id="body-linkedin">
+                            <div class="accordion-content">
+                                <div class="cert-list" id="list-linkedin">
+                                    <!-- Rendered dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy">&copy; <span id="year"></span> Sebastian Selinger. <span data-lang-de="Alle Rechte vorbehalten." data-lang-en="All rights reserved.">Alle Rechte vorbehalten.</span> &middot; <a href="#" id="impressum-link" style="color: var(--text-muted); text-decoration: underline;" data-lang-de="Impressum &amp; Datenschutz" data-lang-en="Imprint &amp; Privacy">Impressum &amp; Datenschutz</a> &middot; <a href="#" data-cookie-settings style="color: var(--text-muted); text-decoration: underline;" data-lang-de="Cookie-Einstellungen" data-lang-en="Cookie settings">Cookie-Einstellungen</a></p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/SebastianSelinger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/Huskynarr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="https://www.xing.com/profile/Sebastian_Selinger" target="_blank" rel="noopener noreferrer" aria-label="XING">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L3.169 13.9c-.09.184-.089.38 0 .53.085.14.253.22.466.22h3.448c.518 0 .748-.317.93-.659 0 0 2.346-4.318 2.422-4.456-.013-.02-2.373-4.12-2.373-4.12-.174-.31-.438-.66-.962-.66H3.648v-.014z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Impressum Modal -->
+    <div class="impressum-overlay" id="impressum-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="impressum-title">
+        <div class="impressum-content">
+            <button class="impressum-close" id="impressum-close" aria-label="Close">&times;</button>
+            <h2 id="impressum-title">Impressum</h2>
+            <h3 data-lang-de="Angaben gemäß § 5 DDG" data-lang-en="Information according to § 5 DDG">Angaben gemäß § 5 DDG</h3>
+            <p>Sebastian Selinger<br>
+            Selinger Consulting<br>
+            Eichstetter Straße 11<br>
+            79106 Freiburg</p>
+
+            <h3 data-lang-de="Kontakt" data-lang-en="Contact">Kontakt</h3>
+            <p>E-Mail: <a href="mailto:admin@sebastianselinger.de">admin@sebastianselinger.de</a><br>
+            <span data-lang-de="Telefon:" data-lang-en="Phone:">Telefon:</span> <a href="tel:+4976145891814">+49 761 45891814</a></p>
+
+            <h3 data-lang-de="Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV" data-lang-en="Responsible for content according to § 18 (2) MStV">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+            <p>Sebastian Selinger<br>
+            Eichstetter Straße 11<br>
+            79106 Freiburg</p>
+
+            <h3 data-lang-de="Haftungsausschluss" data-lang-en="Disclaimer">Haftungsausschluss</h3>
+            <p data-lang-de="Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden." data-lang-en="The contents of this website have been created with the utmost care. However, no guarantee can be given for the correctness, completeness and topicality of the content.">Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.</p>
+
+            <h2 data-lang-de="Datenschutzerklärung" data-lang-en="Privacy Policy" style="margin-top: 2rem;">Datenschutzerklärung</h2>
+
+            <h3 data-lang-de="1. Verantwortlicher" data-lang-en="1. Controller">1. Verantwortlicher</h3>
+            <p data-lang-de="Verantwortlich für die Datenverarbeitung auf dieser Website ist Sebastian Selinger, Eichstetter Straße 11, 79106 Freiburg, E-Mail: admin@sebastianselinger.de." data-lang-en="The controller responsible for data processing on this website is Sebastian Selinger, Eichstetter Straße 11, 79106 Freiburg, Germany, email: admin@sebastianselinger.de.">Verantwortlich für die Datenverarbeitung auf dieser Website ist Sebastian Selinger, Eichstetter Straße 11, 79106 Freiburg, E-Mail: admin@sebastianselinger.de.</p>
+
+            <h3 data-lang-de="2. Hosting und Server-Logfiles" data-lang-en="2. Hosting and server log files">2. Hosting und Server-Logfiles</h3>
+            <p data-lang-de="Diese Website wird bei GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website werden durch den Hoster automatisch Informationen in Server-Logfiles erfasst (u. a. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp). Dies dient der technischen Bereitstellung und Sicherheit der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Eine Datenübermittlung in die USA kann stattfinden; GitHub is unter dem EU-US Data Privacy Framework zertifiziert." data-lang-en="This website is hosted on GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When the website is accessed, the host automatically collects information in server log files (including IP address, date and time of access, page accessed, browser type). This serves the technical provision and security of the website. The legal basis is Art. 6 (1) (f) GDPR (legitimate interest). Data may be transferred to the USA; GitHub is certified under the EU-US Data Privacy Framework.">Diese Website wird bei GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website werden durch den Hoster automatisch Informationen in Server-Logfiles erfasst (u. a. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp). Dies dient der technischen Bereitstellung und Sicherheit der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Eine Datenübermittlung in die USA kann stattfinden; GitHub ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
+
+            <h3 data-lang-de="3. Cookies und Einwilligung" data-lang-en="3. Cookies and consent">3. Cookies und Einwilligung</h3>
+            <p data-lang-de="Technisch nicht notwendige Dienste (z. B. Google Analytics) werden erst geladen, nachdem Sie über den Cookie-Hinweis ausdrücklich eingewilligt haben. Ihre Entscheidung wird lokal in Ihrem Browser (localStorage) gespeichert, damit der Hinweis nicht erneut erscheint. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen." data-lang-en="Services that are not technically necessary (e.g. Google Analytics) are only loaded after you have given your explicit consent via the cookie notice. Your decision is stored locally in your browser (localStorage) so that the notice does not appear again. You can withdraw your consent at any time with effect for the future.">Technisch nicht notwendige Dienste (z. B. Google Analytics) werden erst geladen, nachdem Sie über den Cookie-Hinweis ausdrücklich eingewilligt haben. Ihre Entscheidung wird lokal in Ihrem Browser (localStorage) gespeichert, damit der Hinweis nicht erneut erscheint. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+            <p><a href="#" data-cookie-settings data-lang-de="Cookie-Einstellungen ändern" data-lang-en="Change cookie settings">Cookie-Einstellungen ändern</a></p>
+
+            <h3 data-lang-de="4. Google Analytics" data-lang-en="4. Google Analytics">4. Google Analytics</h3>
+            <p data-lang-de="Diese Website nutzt — ausschließlich nach Ihrer Einwilligung — Google Analytics, einen Webanalysedienst der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Google Analytics verwendet Cookies, die eine Analyse der Nutzung der Website ermöglichen. Die IP-Adresse wird anonymisiert verarbeitet. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Dabei kann es zu einer Übermittlung von Daten an Google in den USA kommen. Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen." data-lang-en="With your consent only, this website uses Google Analytics, a web analytics service provided by Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Ireland). Google Analytics uses cookies that enable an analysis of the use of the website. The IP address is processed in anonymized form. The legal basis is your consent pursuant to Art. 6 (1) (a) GDPR. Data may be transferred to Google in the USA. You can withdraw your consent at any time via the cookie settings.">Diese Website nutzt — ausschließlich nach Ihrer Einwilligung — Google Analytics, einen Webanalysedienst der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Google Analytics verwendet Cookies, die eine Analyse der Nutzung der Website ermöglichen. Die IP-Adresse wird anonymisiert verarbeitet. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Dabei kann es zu einer Übermittlung von Daten an Google in den USA kommen. Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.</p>
+
+            <h3 data-lang-de="5. Kontaktformular" data-lang-en="5. Contact form">5. Kontaktformular</h3>
+            <p data-lang-de="Wenn Sie das Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Betreff, Nachricht) zur Bearbeitung Ihrer Anfrage über den Dienstleister Formspree (Formspree, Inc., 1390 Market Street, San Francisco, CA 94102, USA) verarbeitet und per E-Mail an uns übermittelt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung/Erfüllung eines Vertrags) bzw. lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind." data-lang-en="If you use the contact form, the data you enter (name, email address, subject, message) is processed via the service provider Formspree (Formspree, Inc., 1390 Market Street, San Francisco, CA 94102, USA) to handle your request and is forwarded to us by email. The legal basis is Art. 6 (1) (b) GDPR (initiation/performance of a contract) or (f) GDPR (legitimate interest in responding to enquiries). The data is deleted as soon as it is no longer required for the purpose.">Wenn Sie das Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Betreff, Nachricht) zur Bearbeitung Ihrer Anfrage über den Dienstleister Formspree (Formspree, Inc., 1390 Market Street, San Francisco, CA 94102, USA) verarbeitet und per E-Mail an uns übermittelt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung/Erfüllung eines Vertrags) bzw. lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind.</p>
+
+            <h3 data-lang-de="6. Ihre Rechte" data-lang-en="6. Your rights">6. Ihre Rechte</h3>
+            <p data-lang-de="Sie haben jederzeit das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Zur Ausübung Ihrer Rechte genügt eine E-Mail an admin@sebastianselinger.de." data-lang-en="You have the right at any time to information (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing (Art. 21 GDPR). You can withdraw any consent given at any time with effect for the future. To exercise your rights, simply send an email to admin@sebastianselinger.de.">Sie haben jederzeit das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Zur Ausübung Ihrer Rechte genügt eine E-Mail an admin@sebastianselinger.de.</p>
+
+            <h3 data-lang-de="7. Beschwerderecht" data-lang-en="7. Right to lodge a complaint">7. Beschwerderecht</h3>
+            <p data-lang-de="Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu, in Baden-Württemberg beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit (LfDI Baden-Württemberg)." data-lang-en="You have the right to lodge a complaint with a data protection supervisory authority; in Baden-Württemberg this is the State Commissioner for Data Protection and Freedom of Information (LfDI Baden-Württemberg).">Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu, in Baden-Württemberg beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit (LfDI Baden-Württemberg).</p>
+
+            <h3 data-lang-de="8. SSL-/TLS-Verschlüsselung" data-lang-en="8. SSL/TLS encryption">8. SSL-/TLS-Verschlüsselung</h3>
+            <p data-lang-de="Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am „https://“ in der Adresszeile Ihres Browsers." data-lang-en="For security reasons, this website uses SSL/TLS encryption. You can recognize an encrypted connection by the &quot;https://&quot; in your browser's address bar.">Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am „https://“ in der Adresszeile Ihres Browsers.</p>
+        </div>
+    </div>
+
+    <!-- Cookie / Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Hinweis" hidden>
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                <span data-lang-de="Diese Website verwendet optionale Cookies (Google Analytics), um die Nutzung zu analysieren. Diese werden nur mit Ihrer Einwilligung geladen." data-lang-en="This website uses optional cookies (Google Analytics) to analyze usage. They are only loaded with your consent.">Diese Website verwendet optionale Cookies (Google Analytics), um die Nutzung zu analysieren. Diese werden nur mit Ihrer Einwilligung geladen.</span>
+                <a href="#" id="cookie-privacy-link" data-lang-de="Mehr in der Datenschutzerklärung" data-lang-en="Learn more in the privacy policy">Mehr in der Datenschutzerklärung</a>
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-btn cookie-btn-decline" id="cookie-decline" data-lang-de="Ablehnen" data-lang-en="Decline">Ablehnen</button>
+                <button type="button" class="cookie-btn cookie-btn-accept" id="cookie-accept" data-lang-de="Akzeptieren" data-lang-en="Accept">Akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="/js/app.js"></script>
+</body>
+</html>

@@ -250,25 +250,76 @@
   ],
   "certificates": [
     {
-      "name": "Kaspersky Sales/Tech Specialist"
+      "name": "EASA Drone License (UAS A1/A3)",
+      "issuer": "EASA / DGAC Luxembourg",
+      "date": "2026-06-12",
+      "url": "https://sebastianselinger.de/files/easa-drone-license.pdf"
     },
     {
-      "name": "Google Digital Workshop"
+      "name": "EU AI Act Essentials",
+      "issuer": "KI-Campus",
+      "date": "2026-06-12",
+      "url": "https://sebastianselinger.de/files/eu-ai-act-essentials.pdf"
     },
     {
-      "name": "AVM Premium Certificate"
+      "name": "EF SET English Certificate (B2)",
+      "issuer": "EF Standard English Test",
+      "date": "2026-06-12",
+      "url": "https://sebastianselinger.de/files/efset-english-certificate.pdf"
     },
     {
-      "name": "Sipgate Sales Certificate"
+      "name": "HACCP & Food Hygiene Training",
+      "issuer": "METRO Germany GmbH",
+      "date": "2025-08-10",
+      "url": "https://sebastianselinger.de/files/haccp-food-safety-certificate.pdf"
     },
     {
-      "name": "Fiverr Freelancing Essentials"
+      "name": "IBM Web Development Fundamentals",
+      "issuer": "IBM SkillsBuild",
+      "date": "2025-08-08",
+      "url": "https://sebastianselinger.de/files/ibm-web-development-fundamentals.pdf"
     },
     {
-      "name": "LinkedIn: Linux · HTML · PHP"
+      "name": "Infection Protection Instruction",
+      "issuer": "Landratsamt Breisgau-Hochschwarzwald",
+      "date": "2025-08-07",
+      "url": "https://sebastianselinger.de/files/infektionsschutz-lebensmittelbelehrung.pdf"
     },
     {
-      "name": "Driving Licence (Cat. B)"
+      "name": "Data Protection Training (Basic)",
+      "issuer": "PROLIANCE GmbH",
+      "date": "2023-11-03",
+      "url": "https://sebastianselinger.de/files/gdpr-data-protection-certificate.pdf"
+    },
+    {
+      "name": "AVM Premium Certificate (Multi-Media Smart Home)",
+      "issuer": "AVM GmbH",
+      "date": "2018-09-11",
+      "url": "https://sebastianselinger.de/files/avm-smart-home-certificate.pdf"
+    },
+    {
+      "name": "Kaspersky Sales/Tech Specialist",
+      "issuer": "Kaspersky"
+    },
+    {
+      "name": "Google Digital Workshop",
+      "issuer": "Google"
+    },
+    {
+      "name": "Sipgate Sales Certificate",
+      "issuer": "Sipgate"
+    },
+    {
+      "name": "Fiverr Freelancing Essentials",
+      "issuer": "Fiverr"
+    },
+    {
+      "name": "LinkedIn: Linux · HTML · PHP",
+      "issuer": "LinkedIn"
+    },
+    {
+      "name": "Driving Licence (Cat. B)",
+      "issuer": "Germany"
     }
   ],
   "projects": [

@@ -12,6 +12,16 @@ def index():
     return serve_root_index()
 
 
+@app.route('/downloads')
+def downloads_redirect():
+    return redirect('/downloads/', code=302)
+
+
+@app.route('/downloads/')
+def downloads():
+    return send_from_directory('downloads', 'index.html')
+
+
 @app.route('/de')
 def index_de_redirect():
     return redirect('/de/', code=302)

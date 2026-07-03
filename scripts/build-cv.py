@@ -91,7 +91,22 @@ DATA = {
             ("DevOps & Projektmanagement", ["Jira", "Xray", "Mantis", "Confluence", "Git / GitHub / GitLab", "Azure CI/CD", "MS Project", "Draw.io"]),
             ("Entwicklung & Web", ["PHP", "Bash", "JavaScript / Node.js", "Vue.js", "Laravel", "Angular", "HTML / SCSS / Tailwind", "WordPress / Hugo"]),
         ],
-        "certificates": ["Kaspersky Sales/Tech Specialist", "Google Digital Workshop", "AVM Premium Zertifikat", "Sipgate Sales Zertifikat", "Fiverr Freelancing Essentials", "LinkedIn: Linux · HTML · PHP", "Führerschein Klasse B"],
+        "certificates": [
+            {"name": "EASA Drohnenführerschein (UAS A1/A3)", "issuer": "EASA / DGAC Luxemburg", "date": "12.06.2026", "file": "easa-drone-license.pdf"},
+            {"name": "EU AI Act Essentials", "issuer": "KI-Campus", "date": "12.06.2026", "file": "eu-ai-act-essentials.pdf"},
+            {"name": "EF SET Englisch-Zertifikat (B2)", "issuer": "EF Standard English Test", "date": "12.06.2026", "file": "efset-english-certificate.pdf"},
+            {"name": "HACCP & Hygieneschulung", "issuer": "METRO Deutschland GmbH", "date": "10.08.2025", "file": "haccp-food-safety-certificate.pdf"},
+            {"name": "IBM Web Development Fundamentals", "issuer": "IBM SkillsBuild", "date": "08.08.2025", "file": "ibm-web-development-fundamentals.pdf"},
+            {"name": "Erstbelehrung zum Infektionsschutz", "issuer": "Landratsamt Breisgau-Hochschwarzwald", "date": "07.08.2025", "file": "infektionsschutz-lebensmittelbelehrung.pdf"},
+            {"name": "Datenschutz-Schulung (Basis)", "issuer": "PROLIANCE GmbH", "date": "03.11.2023", "file": "gdpr-data-protection-certificate.pdf"},
+            {"name": "AVM Premium Zertifikat (Multi-Media Smart Home)", "issuer": "AVM GmbH", "date": "11.09.2018", "file": "avm-smart-home-certificate.pdf"},
+            {"name": "Kaspersky Sales/Tech Specialist", "issuer": "Kaspersky", "date": ""},
+            {"name": "Google Digital Workshop", "issuer": "Google", "date": ""},
+            {"name": "Sipgate Sales Zertifikat", "issuer": "Sipgate", "date": ""},
+            {"name": "Fiverr Freelancing Essentials", "issuer": "Fiverr", "date": ""},
+            {"name": "LinkedIn: Linux · HTML · PHP", "issuer": "LinkedIn", "date": ""},
+            {"name": "Führerschein Klasse B", "issuer": "Deutschland", "date": ""}
+        ],
         "projects": [
             ("XboxDev.com", "Gaming-News-Portal — Gründung, Redaktion und Betrieb", "seit 2015"),
             ("Cologna", "Betrieb einer Browsergame-Plattform", "2014–2024"),
@@ -160,7 +175,22 @@ DATA = {
             ("DevOps & Project Management", ["Jira", "Xray", "Mantis", "Confluence", "Git / GitHub / GitLab", "Azure CI/CD", "MS Project", "Draw.io"]),
             ("Development & Web", ["PHP", "Bash", "JavaScript / Node.js", "Vue.js", "Laravel", "Angular", "HTML / SCSS / Tailwind", "WordPress / Hugo"]),
         ],
-        "certificates": ["Kaspersky Sales/Tech Specialist", "Google Digital Workshop", "AVM Premium Certificate", "Sipgate Sales Certificate", "Fiverr Freelancing Essentials", "LinkedIn: Linux · HTML · PHP", "Driving Licence (Cat. B)"],
+        "certificates": [
+            {"name": "EASA Drone License (UAS A1/A3)", "issuer": "EASA / DGAC Luxembourg", "date": "2026-06-12", "file": "easa-drone-license.pdf"},
+            {"name": "EU AI Act Essentials", "issuer": "KI-Campus", "date": "2026-06-12", "file": "eu-ai-act-essentials.pdf"},
+            {"name": "EF SET English Certificate (B2)", "issuer": "EF Standard English Test", "date": "2026-06-12", "file": "efset-english-certificate.pdf"},
+            {"name": "HACCP & Food Hygiene Training", "issuer": "METRO Germany GmbH", "date": "2025-08-10", "file": "haccp-food-safety-certificate.pdf"},
+            {"name": "IBM Web Development Fundamentals", "issuer": "IBM SkillsBuild", "date": "2025-08-08", "file": "ibm-web-development-fundamentals.pdf"},
+            {"name": "Infection Protection Instruction", "issuer": "Landratsamt Breisgau-Hochschwarzwald", "date": "2025-08-07", "file": "infektionsschutz-lebensmittelbelehrung.pdf"},
+            {"name": "Data Protection Training (Basic)", "issuer": "PROLIANCE GmbH", "date": "2023-11-03", "file": "gdpr-data-protection-certificate.pdf"},
+            {"name": "AVM Premium Certificate (Multi-Media Smart Home)", "issuer": "AVM GmbH", "date": "2018-09-11", "file": "avm-smart-home-certificate.pdf"},
+            {"name": "Kaspersky Sales/Tech Specialist", "issuer": "Kaspersky", "date": ""},
+            {"name": "Google Digital Workshop", "issuer": "Google", "date": ""},
+            {"name": "Sipgate Sales Certificate", "issuer": "Sipgate", "date": ""},
+            {"name": "Fiverr Freelancing Essentials", "issuer": "Fiverr", "date": ""},
+            {"name": "LinkedIn: Linux · HTML · PHP", "issuer": "LinkedIn", "date": ""},
+            {"name": "Driving Licence (Cat. B)", "issuer": "Germany", "date": ""}
+        ],
         "projects": [
             ("XboxDev.com", "Gaming news portal — founded, edited, and operated", "since 2015"),
             ("Cologna", "Operation of a browser-game platform", "2014–2024"),
@@ -223,7 +253,15 @@ def build_json(anon: bool):
         "education": education,
         "skills": skills,
         "languages": [{"language": l, "fluency": f} for (l, f) in d["languages"]],
-        "certificates": [{"name": c} for c in d["certificates"]],
+        "certificates": [
+            {
+                "name": c["name"],
+                **({"issuer": c["issuer"]} if c.get("issuer") else {}),
+                **({"date": c["date"]} if c.get("date") else {}),
+                **({"url": f"{URL}/files/{c['file']}"} if c.get("file") else {})
+            }
+            for c in d["certificates"]
+        ],
         "projects": projects,
         "meta": {
             "canonical": f"{URL}/resume.json",
@@ -286,7 +324,7 @@ def render_html(lang, variant):
         chips = "".join(f'<span class="tag">{esc(k)}</span>' for k in kws)
         skills_html += f'<div class="skblk"><h4>{esc(grp)}</h4><div class="tags">{chips}</div></div>'
 
-    certs_html = "".join(f"<li>{esc(c)}</li>" for c in d["certificates"])
+    certs_html = "".join(f"<li>{esc(c['name'])}</li>" for c in d["certificates"])
     langs_html = "".join(f'<li><strong>{esc(l)}</strong> — {esc(f)}</li>' for l, f in d["languages"])
 
     work_html = ""
