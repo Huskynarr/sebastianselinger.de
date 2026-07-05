@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     if (fileDe && fileEn && fileDe !== fileEn) {
                         actionHtml = `
-                            <a href="${fileDe}" class="btn-download" target="_blank" aria-label="PDF Deutsch für ${title}">
+                            <a href="${encodeURI(fileDe)}" class="btn-download" target="_blank" aria-label="PDF Deutsch für ${title}">
                                 <span>Deutsch</span>
                                 ${externalLinkIcon}
                             </a>
-                            <a href="${fileEn}" class="btn-download" target="_blank" aria-label="PDF English for ${title}">
+                            <a href="${encodeURI(fileEn)}" class="btn-download" target="_blank" aria-label="PDF English for ${title}">
                                 <span>English</span>
                                 ${externalLinkIcon}
                             </a>
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         const fileLink = fileDe || fileEn;
                         const btnText = lang === 'de' ? 'PDF anzeigen' : 'View PDF';
                         actionHtml = `
-                            <a href="${fileLink}" class="btn-download" target="_blank" aria-label="${btnText} - ${title}">
+                            <a href="${encodeURI(fileLink)}" class="btn-download" target="_blank" aria-label="${btnText} - ${title}">
                                 <span>${btnText}</span>
                                 ${externalLinkIcon}
                             </a>
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                             <div class="cert-actions">
-                                <a href="${item.file}" class="btn-download" target="_blank" aria-label="${btnText} - ${item.title}">
+                                <a href="${encodeURI(item.file)}" class="btn-download" target="_blank" aria-label="${btnText} - ${item.title}">
                                     <span>${btnText}</span>
                                     ${externalLinkIcon}
                                 </a>
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                             <div class="cert-actions">
-                                <a href="${item.file}" class="btn-download" target="_blank" aria-label="${btnText} - ${item.title}">
+                                <a href="${encodeURI(item.file)}" class="btn-download" target="_blank" aria-label="${btnText} - ${item.title}">
                                     <span>${btnText}</span>
                                     ${externalLinkIcon}
                                 </a>
