@@ -995,6 +995,19 @@
 
         .skill-panel.active { display: block; }
 
+        .certificates-panel-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-card);
+        }
+        .certificates-panel-content h3 { margin: 0 0 .5rem; }
+        .certificates-panel-content p { margin: 0; color: var(--text-muted); }
+
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
@@ -1622,6 +1635,7 @@
             .experience-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .skill-panel-grid { grid-template-columns: 1fr; }
+            .certificates-panel-content { align-items: flex-start; flex-direction: column; }
             .companies-grid { grid-template-columns: repeat(4, 1fr); }
         }
 
